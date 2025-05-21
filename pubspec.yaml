@@ -1,0 +1,57 @@
+name: event_flow
+description: "A new Flutter project."
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.7.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Routing
+  go_router: ^13.0.0
+
+  # Utilities
+  http: ^1.1.0
+  shared_preferences: ^2.5.3
+  path_provider: ^2.0.15
+  permission_handler: ^11.4.0
+
+  # UI
+  cupertino_icons: ^1.0.8
+  google_fonts: ^6.2.1
+  cached_network_image: ^3.2.3
+  shimmer: ^3.0.0
+  image_picker: ^1.1.2
+
+  # File handling
+  pdf: ^3.10.4
+  open_file: ^3.3.2
+  flutter_pdfview: ^1.3.0
+
+  # Sharing
+  share_plus: ^7.0.0
+
+  # Native functionality
+  android_intent_plus: ^4.0.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  flutter_launcher_icons: ^0.13.1
+
+flutter:
+  uses-material-design: true
+  assets:
+    - lib/assets/
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "lib/assets/logo.jpg"
+  min_sdk_android: 21
+  adaptive_icon_background: "#FFFFFF"
+  adaptive_icon_foreground: "lib/assets/logo.jpg"
+  remove_alpha_ios: true
