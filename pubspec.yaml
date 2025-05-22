@@ -2,13 +2,16 @@ name: event_flow
 description: "A new Flutter project."
 version: 1.0.0+1
 
+license: MIT
+
 environment:
   sdk: ^3.7.2
 
 dependencies:
   flutter:
     sdk: flutter
-
+  qr_flutter: ^4.1.0 
+  
   # Routing
   go_router: ^13.0.0
 
@@ -35,6 +38,7 @@ dependencies:
 
   # Native functionality
   android_intent_plus: ^4.0.1
+  mobile_scanner: ^3.0.0
 
 dev_dependencies:
   flutter_test:

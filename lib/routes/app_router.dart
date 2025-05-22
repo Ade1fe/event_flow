@@ -1,4 +1,5 @@
-import 'package:event_flow/screens/homepage/home_page.dart';
+import 'package:event_flow/screens/event/event_management_screen.dart';
+import 'package:event_flow/screens/main_container.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -8,18 +9,20 @@ final GoRouter appRouter = GoRouter(
     GoRoute(
       path: '/',
       name: 'home',
-      builder: (BuildContext context, GoRouterState state) => const HomePage(),
+      builder:
+          (BuildContext context, GoRouterState state) => const MainContainer(),
     ),
-    // Add more routes here as needed
-    // Example:
-    // GoRoute(
-    //   path: '/create',
-    //   name: 'create_event',
-    //   builder: (BuildContext context, GoRouterState state) => const CreateEventPage(),
-    // ),
+    // Event management route with parameters
+    GoRoute(
+      path: '/event/:eventId',
+      name: 'event_management',
+      builder: (BuildContext context, GoRouterState state) {
+        // Extract parameters from the state
+        final eventId = state.pathParameters['eventId'] ?? '';
+        final eventName = state.uri.queryParameters['eventName'] ?? 'Event';
+
+        return EventManagementScreen(eventId: eventId, eventName: eventName);
+      },
+    ),
   ],
 );
-
-// to call it in your widget
-// context.go('/'); // for home
-// context.go('/create'); // for a create event page

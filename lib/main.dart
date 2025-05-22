@@ -13,6 +13,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp.router(
       title: 'Event Flow',
+      debugShowCheckedModeBanner: false,
+      themeMode: ThemeMode.light,
       theme: AppTheme.lightTheme,
       routerConfig: appRouter,
     );
