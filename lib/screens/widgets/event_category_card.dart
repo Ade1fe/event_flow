@@ -49,7 +49,7 @@ class _EventCategoryCardState extends State<EventCategoryCard>
     final Color primaryColor =
         widget.primaryColor ?? Theme.of(context).primaryColor;
     final Color secondaryColor =
-        widget.secondaryColor ?? primaryColor.withOpacity(0.7);
+        widget.secondaryColor ?? primaryColor.withValues(alpha: .7);
 
     return GestureDetector(
       onTap: widget.onTap,
@@ -69,12 +69,12 @@ class _EventCategoryCardState extends State<EventCategoryCard>
             gradient: LinearGradient(
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
-              colors: [primaryColor.withOpacity(0.9), secondaryColor],
+              colors: [primaryColor.withValues(alpha: .9), secondaryColor],
             ),
             borderRadius: BorderRadius.circular(16),
             boxShadow: [
               BoxShadow(
-                color: primaryColor.withOpacity(0.3),
+                color: primaryColor.withValues(alpha: .3),
                 blurRadius: 12,
                 spreadRadius: 0,
                 offset: const Offset(0, 4),
@@ -90,7 +90,7 @@ class _EventCategoryCardState extends State<EventCategoryCard>
                   top: -15,
                   child: CircleAvatar(
                     radius: 40,
-                    backgroundColor: Colors.white.withOpacity(0.1),
+                    backgroundColor: Colors.white.withValues(alpha: .1),
                   ),
                 ),
                 Padding(
@@ -115,7 +115,7 @@ class _EventCategoryCardState extends State<EventCategoryCard>
                         height: 3,
                         width: 40,
                         decoration: BoxDecoration(
-                          color: Colors.white.withOpacity(0.7),
+                          color: Colors.white.withValues(alpha: .7),
                           borderRadius: BorderRadius.circular(10),
                         ),
                       ),

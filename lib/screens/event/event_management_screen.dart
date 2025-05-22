@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:qr_flutter/qr_flutter.dart'; // You'll need to add this package
 import 'package:event_flow/theme/theme.dart';
 
@@ -88,14 +89,10 @@ class _EventManagementScreenState extends State<EventManagementScreen>
       backgroundColor: AppColors.background,
       appBar: AppBar(
         leading: IconButton(
-          icon: const Icon(
-            Icons.arrow_back,
-            color: Colors.black,
-          ), // 👈 Custom color
-          onPressed: () => Navigator.pop(context),
+          icon: const Icon(Icons.arrow_back, color: Colors.black),
+          onPressed: () => context.go('/'),
         ),
-        automaticallyImplyLeading: true,
-        iconTheme: IconThemeData(color: Colors.black),
+        automaticallyImplyLeading: false,
         title: Text(widget.eventName),
         backgroundColor: Theme.of(context).primaryColor,
         foregroundColor: Colors.white,

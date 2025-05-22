@@ -234,7 +234,7 @@ class _ApprovalRequestsScreenState extends State<ApprovalRequestsScreen>
                 ? Icons.check_circle
                 : Icons.cancel,
             size: 80,
-            color: theme.colorScheme.outline.withOpacity(0.6),
+            color: theme.colorScheme.outline.withValues(alpha: .6),
           ),
           const SizedBox(height: 16),
           Text(
@@ -242,7 +242,7 @@ class _ApprovalRequestsScreenState extends State<ApprovalRequestsScreen>
             style: TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.bold,
-              color: theme.colorScheme.outline.withOpacity(0.8),
+              color: theme.colorScheme.outline.withValues(alpha: .8),
             ),
           ),
           const SizedBox(height: 8),
@@ -252,7 +252,7 @@ class _ApprovalRequestsScreenState extends State<ApprovalRequestsScreen>
                 : 'Requests will appear here after processing',
             style: TextStyle(
               fontSize: 14,
-              color: theme.colorScheme.outline.withOpacity(0.6),
+              color: theme.colorScheme.outline.withValues(alpha: .6),
             ),
           ),
         ],
@@ -320,7 +320,7 @@ class _ApprovalRequestsScreenState extends State<ApprovalRequestsScreen>
       tag: 'avatar-${request.id}',
       child: CircleAvatar(
         radius: 24,
-        backgroundColor: theme.colorScheme.primary.withOpacity(0.1),
+        backgroundColor: theme.colorScheme.primary.withValues(alpha: .1),
         child: Text(
           request.attendeeName.substring(0, 1).toUpperCase(),
           style: TextStyle(
@@ -337,7 +337,7 @@ class _ApprovalRequestsScreenState extends State<ApprovalRequestsScreen>
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
       decoration: BoxDecoration(
-        color: theme.colorScheme.surfaceVariant.withOpacity(0.5),
+        color: theme.colorScheme.surfaceContainerHighest.withValues(alpha: .5),
         borderRadius: BorderRadius.circular(12),
       ),
       child: Text(
@@ -355,9 +355,11 @@ class _ApprovalRequestsScreenState extends State<ApprovalRequestsScreen>
     return Container(
       padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(
-        color: theme.colorScheme.surfaceVariant.withOpacity(0.3),
+        color: theme.colorScheme.surfaceContainerHighest.withValues(alpha: .3),
         borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: theme.colorScheme.outline.withOpacity(0.2)),
+        border: Border.all(
+          color: theme.colorScheme.outline.withValues(alpha: .2),
+        ),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -380,7 +382,7 @@ class _ApprovalRequestsScreenState extends State<ApprovalRequestsScreen>
           Text(
             request.qrData,
             style: TextStyle(
-              color: theme.colorScheme.onSurface.withOpacity(0.8),
+              color: theme.colorScheme.onSurface.withValues(alpha: .8),
               fontSize: 14,
               fontFamily: 'monospace',
             ),

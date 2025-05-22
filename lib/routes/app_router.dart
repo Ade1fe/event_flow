@@ -1,4 +1,5 @@
 import 'package:event_flow/screens/event/event_management_screen.dart';
+import 'package:event_flow/screens/event/event_detail_page.dart';
 import 'package:event_flow/screens/main_container.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -24,5 +25,21 @@ final GoRouter appRouter = GoRouter(
         return EventManagementScreen(eventId: eventId, eventName: eventName);
       },
     ),
+    GoRoute(
+      path: '/event/:eventId',
+      builder: (context, state) {
+        final eventId = state.pathParameters['eventId']!;
+        return EventDetailPage(eventId: eventId);
+      },
+    ),
+    // GoRoute(
+    //   path: '/event-management/:eventId/:eventName',
+    //   name: 'eventManagement',
+    //   builder: (context, state) {
+    //     final eventId = state.pathParameters['eventId']!;
+    //     final eventName = state.pathParameters['eventName']!;
+    //     return EventManagementScreen(eventId: eventId, eventName: eventName);
+    //   },
+    // ),
   ],
 );

@@ -1,4 +1,5 @@
 import 'package:event_flow/screens/homepage/home_page.dart';
+import 'package:event_flow/screens/event/event_detail_page.dart';
 import 'package:flutter/material.dart';
 import 'package:event_flow/screens/widgets/navbar_widget.dart';
 import 'package:event_flow/theme/theme.dart';
@@ -16,7 +17,7 @@ class _MainContainerState extends State<MainContainer> {
   // Content for each tab with themed styling
   List<Widget> get _screenContents => [
     HomePage(),
-    Center(child: Text('Neigor Screen', style: AppTextStyles.headline1)),
+    EventDetailPage(eventId: '12345'),
     Center(child: Text('Commision Screen', style: AppTextStyles.headline1)),
     Center(child: Text('Ris Screen', style: AppTextStyles.headline1)),
     Center(child: Text('Nostiudes Screen', style: AppTextStyles.headline1)),

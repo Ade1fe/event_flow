@@ -1,7 +1,6 @@
 name: event_flow
 description: "A new Flutter project."
 version: 1.0.0+1
-
 license: MIT
 
 environment:
@@ -10,8 +9,11 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  qr_flutter: ^4.1.0 
-  
+
+  # QR Code
+  qr_flutter: ^4.1.0       # For generating QR codes
+  mobile_scanner: ^3.0.0   # For scanning QR codes
+
   # Routing
   go_router: ^13.0.0
 
@@ -28,7 +30,7 @@ dependencies:
   shimmer: ^3.0.0
   image_picker: ^1.1.2
 
-  # File handling
+  # File Handling
   pdf: ^3.10.4
   open_file: ^3.3.2
   flutter_pdfview: ^1.3.0
@@ -38,7 +40,6 @@ dependencies:
 
   # Native functionality
   android_intent_plus: ^4.0.1
-  mobile_scanner: ^3.0.0
 
 dev_dependencies:
   flutter_test:
