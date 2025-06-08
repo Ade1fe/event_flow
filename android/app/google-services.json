@@ -1,0 +1,67 @@
+{
+  "project_info": {
+    "project_number": "866805703222",
+    "project_id": "postpolly-32d6f",
+    "storage_bucket": "postpolly-32d6f.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:866805703222:android:fd3fff63d65f7ece0dee97",
+        "android_client_info": {
+          "package_name": "com.example.firebase_task_manager_new"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJkWxs9b7_1q8jcmWOIOygMlJ2xBanSK0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:866805703222:android:32db5a6902d319260dee97",
+        "android_client_info": {
+          "package_name": "com.example.postpolly"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJkWxs9b7_1q8jcmWOIOygMlJ2xBanSK0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:866805703222:android:caba52514d7f63200dee97",
+        "android_client_info": {
+          "package_name": "com.example.task_manager_clean"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJkWxs9b7_1q8jcmWOIOygMlJ2xBanSK0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
