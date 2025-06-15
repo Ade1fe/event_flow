@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/services.dart';
+// import 'package:momentum/providers/category_provider.dart';
 import 'package:provider/provider.dart';
 import 'package:task_manager_clean/providers/category_provider.dart';
 
@@ -49,7 +50,7 @@ class MyApp extends StatelessWidget {
       child: Consumer<ThemeProvider>(
         builder: (context, themeProvider, _) {
           return MaterialApp(
-            title: 'TaskMaster Pro',
+            title: 'Momentum',
             debugShowCheckedModeBanner: false,
             theme: ThemeService.lightTheme,
             darkTheme: ThemeService.darkTheme,

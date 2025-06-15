@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:task_manager_clean/widgets/custom_app_bar.dart';
+import 'package:task_manager_clean/widgets/professional_app_bar.dart';
 import '../../providers/task_provider.dart';
 import '../../providers/auth_provider.dart';
 import '../../widgets/stats_card.dart';
@@ -10,7 +11,7 @@ class AnalyticsTab extends StatefulWidget {
   const AnalyticsTab({super.key});
 
   @override
-    // ignore: library_private_types_in_public_api
+  // ignore: library_private_types_in_public_api
   _AnalyticsTabState createState() => _AnalyticsTabState();
 }
 
@@ -28,11 +29,16 @@ class _AnalyticsTabState extends State<AnalyticsTab> {
       // appBar: AppBar(
       //   title: Text('Analytics'),
       // ),
-      appBar: CustomAppBar(
+      // appBar: CustomAppBar(
+      //   title: 'Analytics',
+      //   showProfile: false,
+      //   scrollController: _scrollController,
+      //   showNotifications: true,
+      // ),
+      appBar: ProfessionalAppBar(
         title: 'Analytics',
-        showProfile: false,
-        scrollController: _scrollController,
         showNotifications: true,
+        showSubtitle: false,
       ),
       body: SingleChildScrollView(
         padding: EdgeInsets.all(16),

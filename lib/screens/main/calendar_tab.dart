@@ -401,7 +401,7 @@ class CalendarTab extends StatefulWidget {
   const CalendarTab({super.key});
 
   @override
-    // ignore: library_private_types_in_public_api
+  // ignore: library_private_types_in_public_api
   _CalendarTabState createState() => _CalendarTabState();
 }
 
@@ -565,7 +565,9 @@ class _CalendarTabState extends State<CalendarTab> {
                         shape: BoxShape.circle,
                         boxShadow: [
                           BoxShadow(
-                            color: theme.colorScheme.primary.withValues(alpha: .4),
+                            color: theme.colorScheme.primary.withValues(
+                              alpha: .4,
+                            ),
                             blurRadius: 8,
                             offset: const Offset(0, 4),
                           ),
@@ -593,7 +595,9 @@ class _CalendarTabState extends State<CalendarTab> {
                     return Container(
                       margin: const EdgeInsets.all(4),
                       decoration: BoxDecoration(
-                        color: theme.colorScheme.secondary.withValues(alpha: .7),
+                        color: theme.colorScheme.secondary.withValues(
+                          alpha: .7,
+                        ),
                         shape: BoxShape.circle,
                       ),
                       child: Stack(
@@ -713,7 +717,9 @@ class _CalendarTabState extends State<CalendarTab> {
             margin: const EdgeInsets.symmetric(horizontal: 16),
             padding: const EdgeInsets.all(12),
             decoration: BoxDecoration(
-              color: theme.colorScheme.surfaceContainerHighest.withValues(alpha: .3),
+              color: theme.colorScheme.surfaceContainerHighest.withValues(
+                alpha: .3,
+              ),
               borderRadius: BorderRadius.circular(12),
             ),
             child: Row(
@@ -819,7 +825,9 @@ class _CalendarTabState extends State<CalendarTab> {
                             margin: const EdgeInsets.only(bottom: 12),
                             padding: const EdgeInsets.symmetric(vertical: 8),
                             decoration: BoxDecoration(
-                              color: theme.colorScheme.primary.withValues(alpha: .1),
+                              color: theme.colorScheme.primary.withValues(
+                                alpha: .1,
+                              ),
                               borderRadius: BorderRadius.circular(8),
                             ),
                             child: Center(
@@ -895,7 +903,9 @@ class _CalendarTabState extends State<CalendarTab> {
           label,
           style: TextStyle(
             fontSize: 10,
-            color: Theme.of(context).colorScheme.onSurface.withValues(alpha: .7),
+            color: Theme.of(
+              context,
+            ).colorScheme.onSurface.withValues(alpha: .7),
             fontWeight: FontWeight.w500,
           ),
         ),

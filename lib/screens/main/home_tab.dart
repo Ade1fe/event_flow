@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:task_manager_clean/widgets/professional_app_bar.dart';
@@ -14,7 +13,7 @@ class HomeTab extends StatefulWidget {
   const HomeTab({super.key});
 
   @override
-    // ignore: library_private_types_in_public_api
+  // ignore: library_private_types_in_public_api
   _HomeTabState createState() => _HomeTabState();
 }
 
@@ -47,7 +46,6 @@ class _HomeTabState extends State<HomeTab> {
         await taskProvider.loadTasks(authProvider.user!.uid);
       }
     } catch (e) {
-      
       // ignore: avoid_print
       print('Error loading tasks: $e');
     } finally {
@@ -94,15 +92,25 @@ class _HomeTabState extends State<HomeTab> {
                       builder: (context, authProvider, child) {
                         return Container(
                           padding: EdgeInsets.all(20),
+
+                          // decoration: BoxDecoration(
+                          //   gradient: LinearGradient(
+                          //     colors: [
+                          //       Theme.of(
+                          //         context,
+                          //       ).colorScheme.primary.withValues(alpha: .1),
+                          //       Theme.of(
+                          //         context,
+                          //       ).colorScheme.secondary.withValues(alpha: .1),
+                          //     ],
+                          //   ),
+                          //   borderRadius: BorderRadius.circular(16),
+                          // ),
                           decoration: BoxDecoration(
                             gradient: LinearGradient(
                               colors: [
-                                Theme.of(
-                                  context,
-                                ).colorScheme.primary.withValues(alpha: .1),
-                                Theme.of(
-                                  context,
-                                ).colorScheme.secondary.withValues(alpha: .1),
+                                Theme.of(context).colorScheme.primary,
+                                Theme.of(context).colorScheme.primaryContainer,
                               ],
                             ),
                             borderRadius: BorderRadius.circular(16),
@@ -117,7 +125,7 @@ class _HomeTabState extends State<HomeTab> {
                                       'Welcome back,',
                                       style: TextStyle(
                                         fontSize: 16,
-                                        color: Colors.grey[600],
+                                        color: Colors.white,
                                       ),
                                     ),
                                     Text(
@@ -126,9 +134,7 @@ class _HomeTabState extends State<HomeTab> {
                                       style: TextStyle(
                                         fontSize: 24,
                                         fontWeight: FontWeight.bold,
-                                        color: Theme.of(
-                                          context,
-                                        ).colorScheme.primary,
+                                        color: Colors.white,
                                       ),
                                     ),
                                     SizedBox(height: 8),
@@ -145,7 +151,7 @@ class _HomeTabState extends State<HomeTab> {
                                           greeting,
                                           style: TextStyle(
                                             fontSize: 14,
-                                            color: Colors.grey[600],
+                                            color: Colors.white,
                                           ),
                                         );
                                       },

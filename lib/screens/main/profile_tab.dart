@@ -80,7 +80,7 @@ class ProfileTab extends StatelessWidget {
             const SizedBox(height: 32),
             Center(
               child: Text(
-                'TaskMaster Pro v1.0.0',
+                'Momentum v1.0.0',
                 style: TextStyle(color: Colors.grey.shade500, fontSize: 12),
               ),
             ),
@@ -280,7 +280,7 @@ class ProfileTab extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: const [
-            Text('Need help with TaskMaster Pro?'),
+            Text('Need help with Momentum?'),
             SizedBox(height: 16),
             Text('• Check our FAQ section'),
             Text('• Contact support: support@taskmaster.com'),
@@ -334,7 +334,7 @@ class ProfileTab extends StatelessWidget {
   void _showAboutDialog(BuildContext context) {
     showAboutDialog(
       context: context,
-      applicationName: 'TaskMaster Pro',
+      applicationName: 'Momentum',
       applicationVersion: '1.0.0',
       applicationIcon: Icon(
         Icons.check_circle_outline,
@@ -344,7 +344,7 @@ class ProfileTab extends StatelessWidget {
       children: const [
         Text('A powerful task management app built with Flutter and Firebase.'),
         SizedBox(height: 16),
-        Text('© 2024 TaskMaster Pro. All rights reserved.'),
+        Text('© 2024 Momentum. All rights reserved.'),
       ],
     );
   }

@@ -11,7 +11,6 @@ class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
 
   @override
-  
   // ignore: library_private_types_in_public_api
   _LoginScreenState createState() => _LoginScreenState();
 }
@@ -34,10 +33,7 @@ class _LoginScreenState extends State<LoginScreen>
     );
 
     _fadeAnimation = Tween<double>(begin: 0.0, end: 1.0).animate(
-      CurvedAnimation(
-        parent: _animationController,
-        curve: Curves.easeIn,
-      ),
+      CurvedAnimation(parent: _animationController, curve: Curves.easeIn),
     );
 
     _animationController.forward();
@@ -67,8 +63,8 @@ class _LoginScreenState extends State<LoginScreen>
                 MainScreen(),
             transitionsBuilder:
                 (context, animation, secondaryAnimation, child) {
-              return FadeTransition(opacity: animation, child: child);
-            },
+                  return FadeTransition(opacity: animation, child: child);
+                },
             transitionDuration: Duration(milliseconds: 800),
           ),
         );
@@ -105,7 +101,7 @@ class _LoginScreenState extends State<LoginScreen>
 
                       // App name
                       Text(
-                        'TaskMaster Pro',
+                        'Momentum',
                         style: TextStyle(
                           fontSize: 28,
                           fontWeight: FontWeight.bold,
@@ -118,10 +114,7 @@ class _LoginScreenState extends State<LoginScreen>
                       // Tagline
                       Text(
                         'Sign in to manage your tasks',
-                        style: TextStyle(
-                          fontSize: 16,
-                          color: Colors.grey,
-                        ),
+                        style: TextStyle(fontSize: 16, color: Colors.grey),
                         textAlign: TextAlign.center,
                       ),
                       SizedBox(height: 48),

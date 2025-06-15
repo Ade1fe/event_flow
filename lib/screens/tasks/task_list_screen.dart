@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:task_manager_clean/widgets/professional_app_bar.dart';
 import '../../providers/task_provider.dart';
 import '../../widgets/task_card.dart';
 import 'add_task_screen.dart';
@@ -36,21 +37,8 @@ class _TaskListScreenState extends State<TaskListScreen> {
     final taskProvider = Provider.of<TaskProvider>(context);
 
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-        actions: [
-          IconButton(
-            icon: Icon(Icons.sort),
-            onPressed: () {
-              _showSortOptions(context);
-            },
-          ),
-        ],
-      ),
-      // appBar: ProfessionalAppBar(
-      //   title: widget.title,
-      //   // showNotifications: true,
-      //   // showProfile: true,
+      // appBar: AppBar(
+      //   title: Text(widget.title),
       //   actions: [
       //     IconButton(
       //       icon: Icon(Icons.sort),
@@ -59,8 +47,21 @@ class _TaskListScreenState extends State<TaskListScreen> {
       //       },
       //     ),
       //   ],
-      //   // showSubtitle: true,
       // ),
+      appBar: ProfessionalAppBar(
+        title: widget.title,
+        // showNotifications: true,
+        showProfile: false,
+        actions: [
+          IconButton(
+            icon: Icon(Icons.sort),
+            onPressed: () {
+              _showSortOptions(context);
+            },
+          ),
+        ],
+        // showSubtitle: true,
+      ),
       body: Column(
         children: [
           // Search bar

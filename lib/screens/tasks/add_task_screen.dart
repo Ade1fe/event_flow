@@ -3419,7 +3419,7 @@ class AddTaskScreen extends StatefulWidget {
   const AddTaskScreen({super.key, this.task, this.initialDate});
 
   @override
-    // ignore: library_private_types_in_public_api
+  // ignore: library_private_types_in_public_api
   _AddTaskScreenState createState() => _AddTaskScreenState();
 }
 

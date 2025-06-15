@@ -9,7 +9,7 @@ class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
 
   @override
-    // ignore: library_private_types_in_public_api
+  // ignore: library_private_types_in_public_api
   _SplashScreenState createState() => _SplashScreenState();
 }
 
@@ -54,8 +54,8 @@ class _SplashScreenState extends State<SplashScreen>
                 MainScreen(),
             transitionsBuilder:
                 (context, animation, secondaryAnimation, child) {
-              return FadeTransition(opacity: animation, child: child);
-            },
+                  return FadeTransition(opacity: animation, child: child);
+                },
             transitionDuration: Duration(milliseconds: 800),
           ),
         );
@@ -66,8 +66,8 @@ class _SplashScreenState extends State<SplashScreen>
                 LoginScreen(),
             transitionsBuilder:
                 (context, animation, secondaryAnimation, child) {
-              return FadeTransition(opacity: animation, child: child);
-            },
+                  return FadeTransition(opacity: animation, child: child);
+                },
             transitionDuration: Duration(milliseconds: 800),
           ),
         );
@@ -113,7 +113,7 @@ class _SplashScreenState extends State<SplashScreen>
                       ),
                       SizedBox(height: 24),
                       Text(
-                        'TaskMaster Pro',
+                        'Momentum',
                         style: TextStyle(
                           fontSize: 32,
                           fontWeight: FontWeight.bold,

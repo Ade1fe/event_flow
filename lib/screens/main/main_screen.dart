@@ -1,7 +1,99 @@
+// import 'package:flutter/material.dart';
+// import 'package:provider/provider.dart';
+// import '../../providers/auth_provider.dart';
+// import '../../providers/task_provider.dart';
+// import 'home_tab.dart';
+// import 'calendar_tab.dart';
+// import 'analytics_tab.dart';
+// import 'profile_tab.dart';
+// import '../tasks/add_task_screen.dart';
+
+// class MainScreen extends StatefulWidget {
+//   const MainScreen({super.key});
+
+//   @override
+//   // ignore: library_private_types_in_public_api
+//   _MainScreenState createState() => _MainScreenState();
+// }
+
+// class _MainScreenState extends State<MainScreen> {
+//   int _currentIndex = 0;
+//   final List<Widget> _tabs = [
+//     HomeTab(),
+//     CalendarTab(),
+//     AnalyticsTab(),
+//     ProfileTab(),
+//   ];
+
+//   @override
+//   void initState() {
+//     super.initState();
+//     _loadTasks();
+//   }
+
+//   Future<void> _loadTasks() async {
+//     final authProvider = Provider.of<AuthProvider>(context, listen: false);
+//     final taskProvider = Provider.of<TaskProvider>(context, listen: false);
+
+//     if (authProvider.user != null) {
+//       await taskProvider.loadTasks(authProvider.user!.uid);
+//     }
+//   }
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       body: IndexedStack(index: _currentIndex, children: _tabs),
+//       bottomNavigationBar: BottomNavigationBar(
+//         currentIndex: _currentIndex,
+//         onTap: (index) {
+//           setState(() {
+//             _currentIndex = index;
+//           });
+//         },
+//         type: BottomNavigationBarType.fixed,
+//         items: [
+//           BottomNavigationBarItem(
+//             icon: Icon(Icons.home_outlined),
+//             activeIcon: Icon(Icons.home),
+//             label: 'Homess',
+//           ),
+//           BottomNavigationBarItem(
+//             icon: Icon(Icons.calendar_today_outlined),
+//             activeIcon: Icon(Icons.calendar_today),
+//             label: 'Calendar',
+//           ),
+//           BottomNavigationBarItem(
+//             icon: Icon(Icons.analytics_outlined),
+//             activeIcon: Icon(Icons.analytics),
+//             label: 'Analytics',
+//           ),
+//           BottomNavigationBarItem(
+//             icon: Icon(Icons.person_outline),
+//             activeIcon: Icon(Icons.person),
+//             label: 'Profile',
+//           ),
+//         ],
+//       ),
+//       floatingActionButton: _currentIndex == 0 || _currentIndex == 1
+//           ? FloatingActionButton(
+//               onPressed: () {
+//                 Navigator.push(
+//                   context,
+//                   MaterialPageRoute(builder: (context) => AddTaskScreen()),
+//                 );
+//               },
+//               child: Icon(Icons.add),
+//             )
+//           : null,
+//     );
+//   }
+// }
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../providers/auth_provider.dart';
 import '../../providers/task_provider.dart';
+import '../../services/theme_service.dart';
 import 'home_tab.dart';
 import 'calendar_tab.dart';
 import 'analytics_tab.dart';
@@ -12,7 +104,7 @@ class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
 
   @override
-    // ignore: library_private_types_in_public_api
+  // ignore: library_private_types_in_public_api
   _MainScreenState createState() => _MainScreenState();
 }
 
@@ -24,6 +116,8 @@ class _MainScreenState extends State<MainScreen> {
     AnalyticsTab(),
     ProfileTab(),
   ];
+
+  bool isDark = false; // Initialize isDark here
 
   @override
   void initState() {
@@ -42,6 +136,9 @@ class _MainScreenState extends State<MainScreen> {
 
   @override
   Widget build(BuildContext context) {
+    // Update isDark based on the current theme
+    isDark = Theme.of(context).brightness == Brightness.dark;
+
     return Scaffold(
       body: IndexedStack(index: _currentIndex, children: _tabs),
       bottomNavigationBar: BottomNavigationBar(
@@ -52,6 +149,12 @@ class _MainScreenState extends State<MainScreen> {
           });
         },
         type: BottomNavigationBarType.fixed,
+        selectedItemColor:
+            Colors.deepPurpleAccent, // Color for the selected item
+        unselectedItemColor: Colors.grey, // Color for unselected items
+        backgroundColor: isDark
+            ? Theme.of(context).colorScheme.surface
+            : Colors.white, // Adjust background color based on theme
         items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.home_outlined),
@@ -83,6 +186,8 @@ class _MainScreenState extends State<MainScreen> {
                   MaterialPageRoute(builder: (context) => AddTaskScreen()),
                 );
               },
+              backgroundColor: Colors.deepPurpleAccent,
+              foregroundColor: Colors.white,
               child: Icon(Icons.add),
             )
           : null,

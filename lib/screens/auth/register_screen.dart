@@ -36,21 +36,16 @@ class _RegisterScreenState extends State<RegisterScreen>
     );
 
     _fadeAnimation = Tween<double>(begin: 0.0, end: 1.0).animate(
-      CurvedAnimation(
-        parent: _animationController,
-        curve: Curves.easeIn,
-      ),
+      CurvedAnimation(parent: _animationController, curve: Curves.easeIn),
     );
 
-    _slideAnimation = Tween<Offset>(
-      begin: Offset(0, 0.3),
-      end: Offset.zero,
-    ).animate(
-      CurvedAnimation(
-        parent: _animationController,
-        curve: Curves.easeOutCubic,
-      ),
-    );
+    _slideAnimation = Tween<Offset>(begin: Offset(0, 0.3), end: Offset.zero)
+        .animate(
+          CurvedAnimation(
+            parent: _animationController,
+            curve: Curves.easeOutCubic,
+          ),
+        );
 
     _animationController.forward();
   }
@@ -244,11 +239,8 @@ class _RegisterScreenState extends State<RegisterScreen>
                         SizedBox(height: 8),
 
                         Text(
-                          'Join TaskMaster Pro and start organizing your life',
-                          style: TextStyle(
-                            fontSize: 16,
-                            color: Colors.grey,
-                          ),
+                          'Join Momentum and start organizing your life',
+                          style: TextStyle(fontSize: 16, color: Colors.grey),
                           textAlign: TextAlign.center,
                         ),
                         SizedBox(height: 48),
@@ -261,12 +253,16 @@ class _RegisterScreenState extends State<RegisterScreen>
                               color: Colors.red.withValues(alpha: .1),
                               borderRadius: BorderRadius.circular(8),
                               border: Border.all(
-                                  color: Colors.red.withValues(alpha: .3)),
+                                color: Colors.red.withValues(alpha: .3),
+                              ),
                             ),
                             child: Row(
                               children: [
-                                Icon(Icons.error_outline,
-                                    color: Colors.red, size: 20),
+                                Icon(
+                                  Icons.error_outline,
+                                  color: Colors.red,
+                                  size: 20,
+                                ),
                                 SizedBox(width: 8),
                                 Expanded(
                                   child: Text(
@@ -309,8 +305,9 @@ class _RegisterScreenState extends State<RegisterScreen>
                             if (value == null || value.isEmpty) {
                               return 'Please enter your email';
                             }
-                            if (!RegExp(r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$')
-                                .hasMatch(value)) {
+                            if (!RegExp(
+                              r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$',
+                            ).hasMatch(value)) {
                               return 'Please enter a valid email address';
                             }
                             return null;
@@ -401,10 +398,9 @@ class _RegisterScreenState extends State<RegisterScreen>
                                   child: RichText(
                                     text: TextSpan(
                                       style: TextStyle(
-                                        color: Theme.of(context)
-                                            .textTheme
-                                            .bodyMedium
-                                            ?.color,
+                                        color: Theme.of(
+                                          context,
+                                        ).textTheme.bodyMedium?.color,
                                         fontSize: 14,
                                       ),
                                       children: [
@@ -412,9 +408,9 @@ class _RegisterScreenState extends State<RegisterScreen>
                                         TextSpan(
                                           text: 'Terms of Service',
                                           style: TextStyle(
-                                            color: Theme.of(context)
-                                                .colorScheme
-                                                .primary,
+                                            color: Theme.of(
+                                              context,
+                                            ).colorScheme.primary,
                                             fontWeight: FontWeight.w500,
                                             decoration:
                                                 TextDecoration.underline,
@@ -424,9 +420,9 @@ class _RegisterScreenState extends State<RegisterScreen>
                                         TextSpan(
                                           text: 'Privacy Policy',
                                           style: TextStyle(
-                                            color: Theme.of(context)
-                                                .colorScheme
-                                                .primary,
+                                            color: Theme.of(
+                                              context,
+                                            ).colorScheme.primary,
                                             fontWeight: FontWeight.w500,
                                             decoration:
                                                 TextDecoration.underline,
@@ -469,9 +465,7 @@ class _RegisterScreenState extends State<RegisterScreen>
                               },
                               child: Text(
                                 'Sign In',
-                                style: TextStyle(
-                                  fontWeight: FontWeight.w600,
-                                ),
+                                style: TextStyle(fontWeight: FontWeight.w600),
                               ),
                             ),
                           ],
@@ -483,10 +477,9 @@ class _RegisterScreenState extends State<RegisterScreen>
                         Container(
                           padding: EdgeInsets.all(16),
                           decoration: BoxDecoration(
-                            color: Theme.of(context)
-                                .colorScheme
-                                .primary
-                                .withValues(alpha: .1),
+                            color: Theme.of(
+                              context,
+                            ).colorScheme.primary.withValues(alpha: .1),
                             borderRadius: BorderRadius.circular(12),
                           ),
                           child: Column(
