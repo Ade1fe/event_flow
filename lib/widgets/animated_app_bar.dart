@@ -19,6 +19,7 @@ class AnimatedAppBar extends StatefulWidget implements PreferredSizeWidget {
   });
 
   @override
+  // ignore: library_private_types_in_public_api
   _AnimatedAppBarState createState() => _AnimatedAppBarState();
 
   @override

@@ -23,6 +23,7 @@ class CategoryProvider with ChangeNotifier {
     } catch (e) {
       _error = 'Failed to load categories: ${e.toString()}';
       _categories = [];
+          // ignore: avoid_print
       print('CategoryProvider error: $e');
     } finally {
       _isLoading = false;
@@ -45,6 +46,7 @@ class CategoryProvider with ChangeNotifier {
       return true;
     } catch (e) {
       _error = 'Failed to add category: ${e.toString()}';
+      // ignore: avoid_print
       print('CategoryProvider add error: $e');
       return false;
     } finally {
@@ -71,6 +73,7 @@ class CategoryProvider with ChangeNotifier {
       return true;
     } catch (e) {
       _error = 'Failed to update category: ${e.toString()}';
+          // ignore: avoid_print
       print('CategoryProvider update error: $e');
       return false;
     } finally {
@@ -90,6 +93,7 @@ class CategoryProvider with ChangeNotifier {
       return true;
     } catch (e) {
       _error = 'Failed to delete category: ${e.toString()}';
+          // ignore: avoid_print
       print('CategoryProvider delete error: $e');
       return false;
     } finally {

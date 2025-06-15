@@ -8,6 +8,7 @@ class ForgotPasswordScreen extends StatefulWidget {
   const ForgotPasswordScreen({super.key});
 
   @override
+  // ignore: library_private_types_in_public_api
   _ForgotPasswordScreenState createState() => _ForgotPasswordScreenState();
 }
 
@@ -127,10 +128,10 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen>
                           Container(
                             padding: EdgeInsets.all(12),
                             decoration: BoxDecoration(
-                              color: Colors.red.withOpacity(0.1),
+                              color: Colors.red.withValues(alpha: .1),
                               borderRadius: BorderRadius.circular(8),
                               border: Border.all(
-                                  color: Colors.red.withOpacity(0.3)),
+                                  color: Colors.red.withValues(alpha: .3)),
                             ),
                             child: Row(
                               children: [
@@ -188,10 +189,10 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen>
                         Container(
                           padding: EdgeInsets.all(16),
                           decoration: BoxDecoration(
-                            color: Colors.green.withOpacity(0.1),
+                            color: Colors.green.withValues(alpha: .1),
                             borderRadius: BorderRadius.circular(12),
                             border: Border.all(
-                                color: Colors.green.withOpacity(0.3)),
+                                color: Colors.green.withValues(alpha: .3)),
                           ),
                           child: Column(
                             children: [

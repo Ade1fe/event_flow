@@ -128,10 +128,10 @@ class QuickActions extends StatelessWidget {
         margin: EdgeInsets.only(right: 12),
         padding: EdgeInsets.all(12),
         decoration: BoxDecoration(
-          color: color.withOpacity(0.1),
+          color: color.withValues(alpha: .1),
           borderRadius: BorderRadius.circular(12),
           border: Border.all(
-            color: color.withOpacity(0.3),
+            color: color.withValues(alpha: .3),
           ),
         ),
         child: Column(

@@ -24,6 +24,7 @@ class CategoryService {
 
       return categories;
     } catch (e) {
+          // ignore: avoid_print
       print('Error getting categories: $e');
       throw Exception('Failed to load categories: $e');
     }
@@ -41,6 +42,7 @@ class CategoryService {
 
       return category.copyWith(id: docRef.id);
     } catch (e) {
+          // ignore: avoid_print
       print('Error adding category: $e');
       throw Exception('Failed to add category: $e');
     }
@@ -54,6 +56,7 @@ class CategoryService {
         'icon': category.icon.codePoint,
       });
     } catch (e) {
+          // ignore: avoid_print
       print('Error updating category: $e');
       throw Exception('Failed to update category: $e');
     }
@@ -63,6 +66,7 @@ class CategoryService {
     try {
       await _firestore.collection(_collection).doc(categoryId).delete();
     } catch (e) {
+          // ignore: avoid_print
       print('Error deleting category: $e');
       throw Exception('Failed to delete category: $e');
     }

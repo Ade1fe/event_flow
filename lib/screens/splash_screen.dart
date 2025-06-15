@@ -9,6 +9,7 @@ class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
 
   @override
+    // ignore: library_private_types_in_public_api
   _SplashScreenState createState() => _SplashScreenState();
 }
 
@@ -124,7 +125,7 @@ class _SplashScreenState extends State<SplashScreen>
                         'Organize your life, one task at a time',
                         style: TextStyle(
                           fontSize: 16,
-                          color: Colors.white.withOpacity(0.8),
+                          color: Colors.white.withValues(alpha: .8),
                         ),
                       ),
                       SizedBox(height: 48),

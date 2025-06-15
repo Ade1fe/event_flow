@@ -9,7 +9,7 @@ class TaskCategory {
   final String userId;
   final DateTime createdAt;
   final IconData icon;
-  
+
   TaskCategory({
     required this.id,
     required this.name,
@@ -18,7 +18,7 @@ class TaskCategory {
     required this.createdAt,
     required this.icon,
   });
-  
+
   factory TaskCategory.fromFirestore(DocumentSnapshot doc) {
     Map<String, dynamic> data = doc.data() as Map<String, dynamic>;
     return TaskCategory(
@@ -27,10 +27,13 @@ class TaskCategory {
       colorIndex: data['colorIndex'] ?? 0,
       userId: data['userId'] ?? '',
       createdAt: (data['createdAt'] as Timestamp).toDate(),
-      icon: IconData(data['iconCodePoint'] ?? 0xe5d5, fontFamily: 'MaterialIcons'),
+      icon: IconData(
+        data['iconCodePoint'] ?? 0xe5d5,
+        fontFamily: 'MaterialIcons',
+      ),
     );
   }
-  
+
   Map<String, dynamic> toFirestore() {
     return {
       'name': name,
@@ -40,9 +43,9 @@ class TaskCategory {
       'iconCodePoint': icon.codePoint,
     };
   }
-  
+
   Color get color => ThemeService.getCategoryColor(colorIndex);
-  
+
   TaskCategory copyWith({
     String? id,
     String? name,

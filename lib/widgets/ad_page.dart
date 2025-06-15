@@ -27,7 +27,7 @@ class AdPage extends StatelessWidget {
           image: AssetImage(backgroundImage),
           fit: BoxFit.cover,
           colorFilter: ColorFilter.mode(
-            Colors.black.withOpacity(0.4),
+            Colors.black.withValues(alpha: .4),
             BlendMode.darken,
           ),
         ),

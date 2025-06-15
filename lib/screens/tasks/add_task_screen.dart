@@ -3403,7 +3403,6 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:intl/intl.dart';
 import '../../models/task.dart';
-import '../../models/category.dart';
 import '../../providers/auth_provider.dart';
 import '../../providers/task_provider.dart';
 import '../../providers/category_provider.dart';
@@ -3420,6 +3419,7 @@ class AddTaskScreen extends StatefulWidget {
   const AddTaskScreen({super.key, this.task, this.initialDate});
 
   @override
+    // ignore: library_private_types_in_public_api
   _AddTaskScreenState createState() => _AddTaskScreenState();
 }
 
@@ -4293,6 +4293,7 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
                       );
                       if (result == true) {
                         final authProvider = Provider.of<AuthProvider>(
+                          // ignore: use_build_context_synchronously
                           context,
                           listen: false,
                         );

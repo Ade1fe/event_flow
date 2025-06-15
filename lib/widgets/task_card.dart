@@ -36,7 +36,7 @@
 //         borderRadius: BorderRadius.circular(12),
 //         side: BorderSide(
 //           color: task.isOverdue && !task.isCompleted
-//               ? Colors.red.withOpacity(0.5)
+//               ? Colors.red.withValues(alpha: .5)
 //               : Colors.transparent,
 //           width: task.isOverdue && !task.isCompleted ? 1 : 0,
 //         ),
@@ -212,9 +212,9 @@
 //     return Container(
 //       padding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
 //       decoration: BoxDecoration(
-//         color: color.withOpacity(0.1),
+//         color: color.withValues(alpha: .1),
 //         borderRadius: BorderRadius.circular(16),
-//         border: Border.all(color: color.withOpacity(0.3)),
+//         border: Border.all(color: color.withValues(alpha: .3)),
 //       ),
 //       child: Row(
 //         mainAxisSize: MainAxisSize.min,
@@ -305,7 +305,7 @@
 //         boxShadow: [
 //           if (isOverdue)
 //             BoxShadow(
-//               color: Colors.red.withOpacity(0.1), // subtle red tint
+//               color: Colors.red.withValues(alpha: .1), // subtle red tint
 //               blurRadius: 2,
 //               spreadRadius: 1,
 //               offset: const Offset(0, 0),
@@ -319,8 +319,8 @@
 //           side: isOverdue
 //               ? BorderSide(
 //                   color: brightness == Brightness.dark
-//                       ? Colors.grey[800]!.withOpacity(0.5)
-//                       : Colors.grey[300]!.withOpacity(0.5),
+//                       ? Colors.grey[800]!.withValues(alpha: .5)
+//                       : Colors.grey[300]!.withValues(alpha: .5),
 //                   width: 1,
 //                 )
 //               : BorderSide.none,
@@ -492,9 +492,9 @@
 //     return Container(
 //       padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
 //       decoration: BoxDecoration(
-//         color: color.withOpacity(0.1),
+//         color: color.withValues(alpha: .1),
 //         borderRadius: BorderRadius.circular(16),
-//         border: Border.all(color: color.withOpacity(0.3)),
+//         border: Border.all(color: color.withValues(alpha: .3)),
 //       ),
 //       child: Row(
 //         mainAxisSize: MainAxisSize.min,
@@ -588,21 +588,21 @@
 //         boxShadow: [
 //           if (isOverdue)
 //             BoxShadow(
-//               color: colorScheme.error.withOpacity(0.1),
+//               color: colorScheme.error.withValues(alpha: .1),
 //               blurRadius: 4,
 //               spreadRadius: 1,
 //               offset: const Offset(0, 2),
 //             )
 //           else if (isCompleted)
 //             BoxShadow(
-//               color: Colors.green.withOpacity(0.08),
+//               color: Colors.green.withValues(alpha: .08),
 //               blurRadius: 4,
 //               spreadRadius: 1,
 //               offset: const Offset(0, 2),
 //             )
 //           else
 //             BoxShadow(
-//               color: colorScheme.shadow.withOpacity(0.05),
+//               color: colorScheme.shadow.withValues(alpha: .05),
 //               blurRadius: 4,
 //               spreadRadius: 0,
 //               offset: const Offset(0, 2),
@@ -616,15 +616,15 @@
 //           borderRadius: BorderRadius.circular(16),
 //           side: isOverdue
 //               ? BorderSide(
-//                   color: colorScheme.error.withOpacity(0.3),
+//                   color: colorScheme.error.withValues(alpha: .3),
 //                   width: 1.5,
 //                 )
 //               : isCompleted
-//               ? BorderSide(color: Colors.green.withOpacity(0.3), width: 1.5)
+//               ? BorderSide(color: Colors.green.withValues(alpha: .3), width: 1.5)
 //               : BorderSide(
 //                   color: brightness == Brightness.dark
-//                       ? colorScheme.outline.withOpacity(0.2)
-//                       : colorScheme.outline.withOpacity(0.1),
+//                       ? colorScheme.outline.withValues(alpha: .2)
+//                       : colorScheme.outline.withValues(alpha: .1),
 //                   width: 1,
 //                 ),
 //         ),
@@ -701,12 +701,12 @@
 //                             decoration: task.isCompleted
 //                                 ? TextDecoration.lineThrough
 //                                 : null,
-//                             decorationColor: Colors.green.withOpacity(0.7),
+//                             decorationColor: Colors.green.withValues(alpha: .7),
 //                             decorationThickness: 2,
 //                             color: task.isCompleted
 //                                 ? (brightness == Brightness.dark
-//                                       ? colorScheme.onSurface.withOpacity(0.6)
-//                                       : colorScheme.onSurface.withOpacity(0.5))
+//                                       ? colorScheme.onSurface.withValues(alpha: .6)
+//                                       : colorScheme.onSurface.withValues(alpha: .5))
 //                                 : colorScheme.onSurface,
 //                           ),
 //                         ),
@@ -718,10 +718,10 @@
 //                             vertical: 4,
 //                           ),
 //                           decoration: BoxDecoration(
-//                             color: Colors.green.withOpacity(0.1),
+//                             color: Colors.green.withValues(alpha: .1),
 //                             borderRadius: BorderRadius.circular(8),
 //                             border: Border.all(
-//                               color: Colors.green.withOpacity(0.3),
+//                               color: Colors.green.withValues(alpha: .3),
 //                               width: 1,
 //                             ),
 //                           ),
@@ -754,8 +754,8 @@
 //                       style: TextStyle(
 //                         fontSize: 14,
 //                         color: task.isCompleted
-//                             ? colorScheme.onSurface.withOpacity(0.4)
-//                             : colorScheme.onSurface.withOpacity(0.7),
+//                             ? colorScheme.onSurface.withValues(alpha: .4)
+//                             : colorScheme.onSurface.withValues(alpha: .7),
 //                         height: 1.4,
 //                       ),
 //                       maxLines: 2,
@@ -817,12 +817,12 @@
 //               decoration: BoxDecoration(
 //                 color: colorScheme.surface,
 //                 borderRadius: BorderRadius.circular(8),
-//                 border: Border.all(color: colorScheme.outline.withOpacity(0.1)),
+//                 border: Border.all(color: colorScheme.outline.withValues(alpha: .1)),
 //               ),
 //               child: PopupMenuButton<String>(
 //                 icon: Icon(
 //                   Icons.more_vert_rounded,
-//                   color: colorScheme.onSurface.withOpacity(0.7),
+//                   color: colorScheme.onSurface.withValues(alpha: .7),
 //                   size: 20,
 //                 ),
 //                 elevation: 8,
@@ -896,19 +896,19 @@
 //     final brightness = Theme.of(context).brightness;
 //     final chipColor = isCompleted
 //         ? (brightness == Brightness.dark
-//               ? color.withOpacity(0.3)
-//               : color.withOpacity(0.4))
+//               ? color.withValues(alpha: .3)
+//               : color.withValues(alpha: .4))
 //         : color;
 
 //     return Container(
 //       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
 //       decoration: BoxDecoration(
-//         color: chipColor.withOpacity(0.1),
+//         color: chipColor.withValues(alpha: .1),
 //         borderRadius: BorderRadius.circular(12),
-//         border: Border.all(color: chipColor.withOpacity(0.3), width: 1),
+//         border: Border.all(color: chipColor.withValues(alpha: .3), width: 1),
 //         boxShadow: [
 //           BoxShadow(
-//             color: chipColor.withOpacity(0.05),
+//             color: chipColor.withValues(alpha: .05),
 //             blurRadius: 2,
 //             spreadRadius: 0,
 //             offset: const Offset(0, 1),
@@ -946,7 +946,7 @@
 //             Container(
 //               padding: const EdgeInsets.all(8),
 //               decoration: BoxDecoration(
-//                 color: colorScheme.error.withOpacity(0.1),
+//                 color: colorScheme.error.withValues(alpha: .1),
 //                 borderRadius: BorderRadius.circular(8),
 //               ),
 //               child: Icon(
@@ -961,13 +961,13 @@
 //         ),
 //         content: Text(
 //           'Are you sure you want to delete "${task.title}"? This action cannot be undone.',
-//           style: TextStyle(color: colorScheme.onSurface.withOpacity(0.8)),
+//           style: TextStyle(color: colorScheme.onSurface.withValues(alpha: .8)),
 //         ),
 //         actions: [
 //           TextButton(
 //             onPressed: () => Navigator.pop(context),
 //             style: TextButton.styleFrom(
-//               foregroundColor: colorScheme.onSurface.withOpacity(0.6),
+//               foregroundColor: colorScheme.onSurface.withValues(alpha: .6),
 //             ),
 //             child: const Text('Cancel'),
 //           ),
@@ -1041,21 +1041,21 @@ class TaskCard extends StatelessWidget {
         boxShadow: [
           if (isOverdue)
             BoxShadow(
-              color: colorScheme.error.withOpacity(0.1),
+              color: colorScheme.error.withValues(alpha: .1),
               blurRadius: 4,
               spreadRadius: 1,
               offset: const Offset(0, 2),
             )
           else if (isCompleted)
             BoxShadow(
-              color: Colors.green.withOpacity(0.08),
+              color: Colors.green.withValues(alpha: .08),
               blurRadius: 4,
               spreadRadius: 1,
               offset: const Offset(0, 2),
             )
           else
             BoxShadow(
-              color: colorScheme.shadow.withOpacity(0.05),
+              color: colorScheme.shadow.withValues(alpha: .05),
               blurRadius: 4,
               spreadRadius: 0,
               offset: const Offset(0, 2),
@@ -1069,15 +1069,15 @@ class TaskCard extends StatelessWidget {
           borderRadius: BorderRadius.circular(16),
           side: isOverdue
               ? BorderSide(
-                  color: colorScheme.error.withOpacity(0.3),
+                  color: colorScheme.error.withValues(alpha: .3),
                   width: 1.5,
                 )
               : isCompleted
-              ? BorderSide(color: Colors.green.withOpacity(0.3), width: 1.5)
+              ? BorderSide(color: Colors.green.withValues(alpha: .3), width: 1.5)
               : BorderSide(
                   color: brightness == Brightness.dark
-                      ? colorScheme.outline.withOpacity(0.2)
-                      : colorScheme.outline.withOpacity(0.1),
+                      ? colorScheme.outline.withValues(alpha: .2)
+                      : colorScheme.outline.withValues(alpha: .1),
                   width: 1,
                 ),
         ),
@@ -1099,6 +1099,7 @@ class TaskCard extends StatelessWidget {
     TaskProvider taskProvider,
   ) {
     final colorScheme = Theme.of(context).colorScheme;
+    // ignore: unused_local_variable
     final brightness = Theme.of(context).brightness;
     final isCompleted = task.isCompleted;
 
@@ -1140,7 +1141,7 @@ class TaskCard extends StatelessWidget {
                           ? TextDecoration.lineThrough
                           : TextDecoration.none,
                       color: isCompleted
-                          ? colorScheme.onSurface.withOpacity(0.5)
+                          ? colorScheme.onSurface.withValues(alpha: .5)
                           : colorScheme.onSurface,
                     ),
                   ),
@@ -1152,7 +1153,7 @@ class TaskCard extends StatelessWidget {
                       overflow: TextOverflow.ellipsis,
                       style: TextStyle(
                         fontSize: 13,
-                        color: colorScheme.onSurface.withOpacity(0.7),
+                        color: colorScheme.onSurface.withValues(alpha: .7),
                       ),
                     ),
                   ],
@@ -1227,6 +1228,7 @@ class TaskCard extends StatelessWidget {
     );
   }
 
+  // ignore: unused_element
   Widget _buildProfessionalChip(
     BuildContext context,
     IconData icon,
@@ -1237,19 +1239,19 @@ class TaskCard extends StatelessWidget {
     final brightness = Theme.of(context).brightness;
     final chipColor = isCompleted
         ? (brightness == Brightness.dark
-              ? color.withOpacity(0.3)
-              : color.withOpacity(0.4))
+              ? color.withValues(alpha: .3)
+              : color.withValues(alpha: .4))
         : color;
 
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
       decoration: BoxDecoration(
-        color: chipColor.withOpacity(0.1),
+        color: chipColor.withValues(alpha: .1),
         borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: chipColor.withOpacity(0.3), width: 1),
+        border: Border.all(color: chipColor.withValues(alpha: .3), width: 1),
         boxShadow: [
           BoxShadow(
-            color: chipColor.withOpacity(0.05),
+            color: chipColor.withValues(alpha: .05),
             blurRadius: 2,
             spreadRadius: 0,
             offset: const Offset(0, 1),
@@ -1280,9 +1282,9 @@ class TaskCard extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
       decoration: BoxDecoration(
-        color: color.withOpacity(0.1),
+        color: color.withValues(alpha: .1),
         borderRadius: BorderRadius.circular(10),
-        border: Border.all(color: color.withOpacity(0.3), width: 1),
+        border: Border.all(color: color.withValues(alpha: .3), width: 1),
       ),
       child: Text(
         label,
@@ -1307,7 +1309,7 @@ class TaskCard extends StatelessWidget {
             Container(
               padding: const EdgeInsets.all(8),
               decoration: BoxDecoration(
-                color: colorScheme.error.withOpacity(0.1),
+                color: colorScheme.error.withValues(alpha: .1),
                 borderRadius: BorderRadius.circular(8),
               ),
               child: Icon(
@@ -1322,13 +1324,13 @@ class TaskCard extends StatelessWidget {
         ),
         content: Text(
           'Are you sure you want to delete "${task.title}"? This action cannot be undone.',
-          style: TextStyle(color: colorScheme.onSurface.withOpacity(0.8)),
+          style: TextStyle(color: colorScheme.onSurface.withValues(alpha: .8)),
         ),
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context),
             style: TextButton.styleFrom(
-              foregroundColor: colorScheme.onSurface.withOpacity(0.6),
+              foregroundColor: colorScheme.onSurface.withValues(alpha: .6),
             ),
             child: const Text('Cancel'),
           ),

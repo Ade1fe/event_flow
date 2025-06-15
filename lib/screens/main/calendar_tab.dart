@@ -266,7 +266,7 @@
 //                   outsideDaysVisible: false,
 //                   weekendTextStyle: const TextStyle(color: Colors.redAccent),
 //                   todayDecoration: BoxDecoration(
-//                     color: theme.colorScheme.secondary.withOpacity(0.5),
+//                     color: theme.colorScheme.secondary.withValues(alpha: .5),
 //                     shape: BoxShape.circle,
 //                   ),
 //                   selectedDecoration: BoxDecoration(
@@ -274,7 +274,7 @@
 //                     shape: BoxShape.circle,
 //                     boxShadow: [
 //                       BoxShadow(
-//                         color: theme.colorScheme.primary.withOpacity(0.4),
+//                         color: theme.colorScheme.primary.withValues(alpha: .4),
 //                         blurRadius: 8,
 //                         offset: const Offset(0, 4),
 //                       ),
@@ -391,7 +391,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:table_calendar/table_calendar.dart';
-import 'package:task_manager_clean/screens/add_task_screen.dart';
 import '../../providers/task_provider.dart';
 import '../../models/task.dart';
 import '../../widgets/task_card.dart';
@@ -402,6 +401,7 @@ class CalendarTab extends StatefulWidget {
   const CalendarTab({super.key});
 
   @override
+    // ignore: library_private_types_in_public_api
   _CalendarTabState createState() => _CalendarTabState();
 }
 
@@ -533,7 +533,7 @@ class _CalendarTabState extends State<CalendarTab> {
               borderRadius: BorderRadius.circular(20),
               boxShadow: [
                 BoxShadow(
-                  color: Colors.black.withOpacity(0.05),
+                  color: Colors.black.withValues(alpha: .05),
                   blurRadius: 10,
                   offset: const Offset(0, 4),
                 ),
@@ -565,7 +565,7 @@ class _CalendarTabState extends State<CalendarTab> {
                         shape: BoxShape.circle,
                         boxShadow: [
                           BoxShadow(
-                            color: theme.colorScheme.primary.withOpacity(0.4),
+                            color: theme.colorScheme.primary.withValues(alpha: .4),
                             blurRadius: 8,
                             offset: const Offset(0, 4),
                           ),
@@ -593,7 +593,7 @@ class _CalendarTabState extends State<CalendarTab> {
                     return Container(
                       margin: const EdgeInsets.all(4),
                       decoration: BoxDecoration(
-                        color: theme.colorScheme.secondary.withOpacity(0.7),
+                        color: theme.colorScheme.secondary.withValues(alpha: .7),
                         shape: BoxShape.circle,
                       ),
                       child: Stack(
@@ -621,7 +621,7 @@ class _CalendarTabState extends State<CalendarTab> {
                     fontWeight: FontWeight.w600,
                   ),
                   weekdayStyle: TextStyle(
-                    color: theme.colorScheme.onSurface.withOpacity(0.7),
+                    color: theme.colorScheme.onSurface.withValues(alpha: .7),
                     fontWeight: FontWeight.w600,
                   ),
                 ),
@@ -713,7 +713,7 @@ class _CalendarTabState extends State<CalendarTab> {
             margin: const EdgeInsets.symmetric(horizontal: 16),
             padding: const EdgeInsets.all(12),
             decoration: BoxDecoration(
-              color: theme.colorScheme.surfaceContainerHighest.withOpacity(0.3),
+              color: theme.colorScheme.surfaceContainerHighest.withValues(alpha: .3),
               borderRadius: BorderRadius.circular(12),
             ),
             child: Row(
@@ -756,7 +756,7 @@ class _CalendarTabState extends State<CalendarTab> {
                       decoration: BoxDecoration(
                         color: _isDarkMode(context)
                             ? Colors.white.withValues(alpha: .1)
-                            : theme.colorScheme.primary.withOpacity(0.1),
+                            : theme.colorScheme.primary.withValues(alpha: .1),
                         borderRadius: BorderRadius.circular(12),
                       ),
                       child: Text(
@@ -819,7 +819,7 @@ class _CalendarTabState extends State<CalendarTab> {
                             margin: const EdgeInsets.only(bottom: 12),
                             padding: const EdgeInsets.symmetric(vertical: 8),
                             decoration: BoxDecoration(
-                              color: theme.colorScheme.primary.withOpacity(0.1),
+                              color: theme.colorScheme.primary.withValues(alpha: .1),
                               borderRadius: BorderRadius.circular(8),
                             ),
                             child: Center(
@@ -895,7 +895,7 @@ class _CalendarTabState extends State<CalendarTab> {
           label,
           style: TextStyle(
             fontSize: 10,
-            color: Theme.of(context).colorScheme.onSurface.withOpacity(0.7),
+            color: Theme.of(context).colorScheme.onSurface.withValues(alpha: .7),
             fontWeight: FontWeight.w500,
           ),
         ),

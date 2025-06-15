@@ -588,7 +588,7 @@ class TaskProvider with ChangeNotifier {
   List<Task> get upcomingTasks {
     final now = DateTime.now();
     final today = DateTime(now.year, now.month, now.day);
-    final tomorrow = today.add(Duration(days: 1));
+    // final tomorrow = today.add(Duration(days: 1));
     final nextWeek = today.add(Duration(days: 7));
 
     return _tasks.where((task) {
@@ -797,6 +797,7 @@ class TaskProvider with ChangeNotifier {
     // Simple overdue check without notifications
     final overdueCount = overdueTasks.length;
     if (overdueCount > 0) {
+      // ignore: avoid_print
       print('Found $overdueCount overdue tasks');
     }
   }

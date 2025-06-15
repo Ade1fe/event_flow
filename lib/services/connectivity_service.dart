@@ -20,6 +20,7 @@ class ConnectivityService {
           (await _connectivity.checkConnectivity()) as ConnectivityResult;
       _updateConnectionStatus(result);
     } catch (e) {
+          // ignore: avoid_print
       print('Connectivity initialization error: $e');
       connectionStatusController.add(false);
     }
@@ -38,6 +39,7 @@ class ConnectivityService {
           (await _connectivity.checkConnectivity()) as ConnectivityResult;
       return result != ConnectivityResult.none;
     } catch (e) {
+          // ignore: avoid_print
       print('Error checking connectivity: $e');
       return false;
     }

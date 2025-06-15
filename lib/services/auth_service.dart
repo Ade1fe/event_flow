@@ -18,9 +18,11 @@ class AuthService {
         password: password,
       );
     } on FirebaseAuthException catch (e) {
+      // ignore: avoid_print
       print('Sign in error: ${e.code} - ${e.message}');
       rethrow;
     } catch (e) {
+      // ignore: avoid_print
       print('Sign in error: $e');
       rethrow;
     }
@@ -35,9 +37,11 @@ class AuthService {
         password: password,
       );
     } on FirebaseAuthException catch (e) {
+      // ignore: avoid_print
       print('Registration error: ${e.code} - ${e.message}');
       rethrow;
     } catch (e) {
+          // ignore: avoid_print
       print('Registration error: $e');
       rethrow;
     }
@@ -48,6 +52,7 @@ class AuthService {
     try {
       return await _auth.signOut();
     } catch (e) {
+      // ignore: avoid_print
       print('Sign out error: $e');
       rethrow;
     }
@@ -58,6 +63,7 @@ class AuthService {
     try {
       await _auth.sendPasswordResetEmail(email: email);
     } catch (e) {
+      // ignore: avoid_print
       print('Password reset error: $e');
       rethrow;
     }

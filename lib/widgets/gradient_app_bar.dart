@@ -39,7 +39,7 @@ class GradientAppBar extends StatelessWidget implements PreferredSizeWidget {
         boxShadow: elevation > 0
             ? [
                 BoxShadow(
-                  color: Colors.black.withOpacity(0.2),
+                  color: Colors.black.withValues(alpha: .2),
                   blurRadius: elevation,
                   offset: Offset(0, elevation),
                 ),

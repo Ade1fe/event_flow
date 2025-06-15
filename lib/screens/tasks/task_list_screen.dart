@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:task_manager_clean/widgets/professional_app_bar.dart';
 import '../../providers/task_provider.dart';
 import '../../widgets/task_card.dart';
 import 'add_task_screen.dart';
@@ -12,11 +11,13 @@ class TaskListScreen extends StatefulWidget {
   const TaskListScreen({super.key, required this.filter, required this.title});
 
   @override
+  // ignore: library_private_types_in_public_api
   _TaskListScreenState createState() => _TaskListScreenState();
 }
 
 class _TaskListScreenState extends State<TaskListScreen> {
   String _searchQuery = '';
+  // ignore: unused_field
   TaskSortOption _sortOption = TaskSortOption.dateDesc;
 
   @override

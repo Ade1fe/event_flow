@@ -38,14 +38,14 @@
 //           end: Alignment.bottomRight,
 //           colors: [
 //             backgroundColor ?? Theme.of(context).colorScheme.primary,
-//             backgroundColor?.withOpacity(0.8) ??
+//             backgroundColor?.withValues(alpha: .8) ??
 //                 Theme.of(context).colorScheme.primaryContainer,
 //           ],
 //         ),
 //         boxShadow: elevation > 0
 //             ? [
 //                 BoxShadow(
-//                   color: Colors.black.withOpacity(0.1),
+//                   color: Colors.black.withValues(alpha: .1),
 //                   blurRadius: elevation,
 //                   offset: Offset(0, elevation / 2),
 //                 ),
@@ -95,7 +95,7 @@
 //                               return Text(
 //                                 'All caught up! 🎉',
 //                                 style: TextStyle(
-//                                   color: Colors.white.withOpacity(0.8),
+//                                   color: Colors.white.withValues(alpha: .8),
 //                                   fontSize: 12,
 //                                 ),
 //                               );
@@ -106,7 +106,7 @@
 //                                   ? '$overdueCount overdue, $pendingCount pending'
 //                                   : '$pendingCount tasks pending',
 //                               style: TextStyle(
-//                                 color: Colors.white.withOpacity(0.8),
+//                                 color: Colors.white.withValues(alpha: .8),
 //                                 fontSize: 12,
 //                               ),
 //                             );
@@ -189,7 +189,7 @@
 //                             margin: EdgeInsets.only(left: 8),
 //                             child: CircleAvatar(
 //                               radius: 18,
-//                               backgroundColor: Colors.white.withOpacity(0.2),
+//                               backgroundColor: Colors.white.withValues(alpha: .2),
 //                               child: authProvider.userProfile?.photoUrl != null
 //                                   ? ClipOval(
 //                                       child: Image.network(
@@ -423,10 +423,10 @@ class _CustomAppBarState extends State<CustomAppBar> {
         : (isDark ? theme.colorScheme.surface : theme.colorScheme.surface);
 
     final Color secondaryBackgroundColor = _scrolled
-        ? Colors.purple.withOpacity(0.8)
+        ? Colors.purple.withValues(alpha: .8)
         : (isDark
               ? theme.colorScheme.surfaceContainerHighest
-              : theme.colorScheme.surfaceContainerHighest.withOpacity(0.8));
+              : theme.colorScheme.surfaceContainerHighest.withValues(alpha: .8));
 
     // Text and icon colors based on theme
     final textColor = theme.colorScheme.onSurface;
@@ -442,7 +442,7 @@ class _CustomAppBarState extends State<CustomAppBar> {
         boxShadow: widget.elevation > 0
             ? [
                 BoxShadow(
-                  color: Colors.black.withOpacity(0.1),
+                  color: Colors.black.withValues(alpha: .1),
                   blurRadius: widget.elevation,
                   offset: Offset(0, widget.elevation / 2),
                 ),
@@ -495,7 +495,7 @@ class _CustomAppBarState extends State<CustomAppBar> {
                               return Text(
                                 'All caught up! 🎉',
                                 style: TextStyle(
-                                  color: textColor.withOpacity(0.8),
+                                  color: textColor.withValues(alpha: .8),
                                   fontSize: 12,
                                 ),
                               );
@@ -506,7 +506,7 @@ class _CustomAppBarState extends State<CustomAppBar> {
                                   ? '$overdueCount overdue, $pendingCount pending'
                                   : '$pendingCount tasks pending',
                               style: TextStyle(
-                                color: textColor.withOpacity(0.8),
+                                color: textColor.withValues(alpha: .8),
                                 fontSize: 12,
                               ),
                             );
@@ -586,7 +586,7 @@ class _CustomAppBarState extends State<CustomAppBar> {
                             margin: EdgeInsets.only(left: 8),
                             child: CircleAvatar(
                               radius: 18,
-                              backgroundColor: textColor.withOpacity(0.2),
+                              backgroundColor: textColor.withValues(alpha: .2),
                               child: authProvider.userProfile?.photoUrl != null
                                   ? ClipOval(
                                       child: Image.network(

@@ -9,6 +9,7 @@ class RegisterScreen extends StatefulWidget {
   const RegisterScreen({super.key});
 
   @override
+  // ignore: library_private_types_in_public_api
   _RegisterScreenState createState() => _RegisterScreenState();
 }
 
@@ -257,10 +258,10 @@ class _RegisterScreenState extends State<RegisterScreen>
                           Container(
                             padding: EdgeInsets.all(12),
                             decoration: BoxDecoration(
-                              color: Colors.red.withOpacity(0.1),
+                              color: Colors.red.withValues(alpha: .1),
                               borderRadius: BorderRadius.circular(8),
                               border: Border.all(
-                                  color: Colors.red.withOpacity(0.3)),
+                                  color: Colors.red.withValues(alpha: .3)),
                             ),
                             child: Row(
                               children: [
@@ -485,7 +486,7 @@ class _RegisterScreenState extends State<RegisterScreen>
                             color: Theme.of(context)
                                 .colorScheme
                                 .primary
-                                .withOpacity(0.1),
+                                .withValues(alpha: .1),
                             borderRadius: BorderRadius.circular(12),
                           ),
                           child: Column(

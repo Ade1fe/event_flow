@@ -84,7 +84,7 @@
 //         boxShadow: showShadow && elevation > 0
 //             ? [
 //                 BoxShadow(
-//                   color: Colors.black.withOpacity(0.05),
+//                   color: Colors.black.withValues(alpha: .05),
 //                   blurRadius: elevation * 2,
 //                   offset: Offset(0, elevation),
 //                   spreadRadius: 0,
@@ -145,11 +145,11 @@
 //                                       subtitleStyle ??
 //                                       TextStyle(
 //                                         color: isTransparent
-//                                             ? Colors.white.withOpacity(0.8)
+//                                             ? Colors.white.withValues(alpha: .8)
 //                                             : Theme.of(context)
 //                                                   .colorScheme
 //                                                   .onSurface
-//                                                   .withOpacity(0.6),
+//                                                   .withValues(alpha: .6),
 //                                         fontSize: 12,
 //                                         fontWeight: FontWeight.w400,
 //                                       ),
@@ -192,13 +192,13 @@
 //                                                 ? Theme.of(context)
 //                                                       .colorScheme
 //                                                       .error
-//                                                       .withOpacity(0.8)
+//                                                       .withValues(alpha: .8)
 //                                                 : isTransparent
-//                                                 ? Colors.white.withOpacity(0.8)
+//                                                 ? Colors.white.withValues(alpha: .8)
 //                                                 : Theme.of(context)
 //                                                       .colorScheme
 //                                                       .onSurface
-//                                                       .withOpacity(0.6),
+//                                                       .withValues(alpha: .6),
 //                                             fontSize: 12,
 //                                             fontWeight: FontWeight.w400,
 //                                           ),
@@ -277,7 +277,7 @@
 //                                         borderRadius: BorderRadius.circular(12),
 //                                         border: Border.all(
 //                                           color: isTransparent
-//                                               ? Colors.black.withOpacity(0.1)
+//                                               ? Colors.black.withValues(alpha: .1)
 //                                               : Theme.of(
 //                                                   context,
 //                                                 ).colorScheme.surface,
@@ -323,14 +323,14 @@
 //                                   shape: BoxShape.circle,
 //                                   border: Border.all(
 //                                     color: isTransparent
-//                                         ? Colors.white.withOpacity(0.2)
+//                                         ? Colors.white.withValues(alpha: .2)
 //                                         : Theme.of(context).colorScheme.primary
-//                                               .withOpacity(0.2),
+//                                               .withValues(alpha: .2),
 //                                     width: 2,
 //                                   ),
 //                                   boxShadow: [
 //                                     BoxShadow(
-//                                       color: Colors.black.withOpacity(0.05),
+//                                       color: Colors.black.withValues(alpha: .05),
 //                                       blurRadius: 4,
 //                                       spreadRadius: 1,
 //                                     ),
@@ -339,10 +339,10 @@
 //                                 child: CircleAvatar(
 //                                   radius: 16,
 //                                   backgroundColor: isTransparent
-//                                       ? Colors.white.withOpacity(0.2)
+//                                       ? Colors.white.withValues(alpha: .2)
 //                                       : Theme.of(
 //                                           context,
-//                                         ).colorScheme.primary.withOpacity(0.1),
+//                                         ).colorScheme.primary.withValues(alpha: .1),
 //                                   child:
 //                                       authProvider.userProfile?.photoUrl != null
 //                                       ? ClipOval(
@@ -407,18 +407,18 @@
 //       decoration: BoxDecoration(
 //         shape: BoxShape.circle,
 //         color: isTransparent
-//             ? Colors.white.withOpacity(0.2)
+//             ? Colors.white.withValues(alpha: .2)
 //             : Theme.of(context).colorScheme.surface,
 //         border: Border.all(
 //           color: isTransparent
-//               ? Colors.white.withOpacity(0.1)
-//               : Theme.of(context).colorScheme.onSurface.withOpacity(0.1),
+//               ? Colors.white.withValues(alpha: .1)
+//               : Theme.of(context).colorScheme.onSurface.withValues(alpha: .1),
 //           width: 1,
 //         ),
 //         boxShadow: showShadow
 //             ? [
 //                 BoxShadow(
-//                   color: Colors.black.withOpacity(0.05),
+//                   color: Colors.black.withValues(alpha: .05),
 //                   blurRadius: 4,
 //                   spreadRadius: 0,
 //                 ),
@@ -461,7 +461,7 @@
 //           ),
 //           boxShadow: [
 //             BoxShadow(
-//               color: Colors.black.withOpacity(0.1),
+//               color: Colors.black.withValues(alpha: .1),
 //               blurRadius: 10,
 //               spreadRadius: 0,
 //               offset: Offset(0, -2),
@@ -476,7 +476,7 @@
 //               width: 40,
 //               height: 4,
 //               decoration: BoxDecoration(
-//                 color: Theme.of(context).colorScheme.onSurface.withOpacity(0.2),
+//                 color: Theme.of(context).colorScheme.onSurface.withValues(alpha: .2),
 //                 borderRadius: BorderRadius.circular(2),
 //               ),
 //             ),
@@ -491,7 +491,7 @@
 //                     decoration: BoxDecoration(
 //                       color: Theme.of(
 //                         context,
-//                       ).colorScheme.primary.withOpacity(0.1),
+//                       ).colorScheme.primary.withValues(alpha: .1),
 //                       borderRadius: BorderRadius.circular(12),
 //                     ),
 //                     child: Icon(
@@ -543,7 +543,7 @@
 //                             decoration: BoxDecoration(
 //                               color: Theme.of(
 //                                 context,
-//                               ).colorScheme.primary.withOpacity(0.1),
+//                               ).colorScheme.primary.withValues(alpha: .1),
 //                               shape: BoxShape.circle,
 //                             ),
 //                             child: Icon(
@@ -567,7 +567,7 @@
 //                             style: TextStyle(
 //                               color: Theme.of(
 //                                 context,
-//                               ).colorScheme.onSurface.withOpacity(0.6),
+//                               ).colorScheme.onSurface.withValues(alpha: .6),
 //                             ),
 //                           ),
 //                         ],
@@ -587,7 +587,7 @@
 //                             side: BorderSide(
 //                               color: Theme.of(
 //                                 context,
-//                               ).colorScheme.outline.withOpacity(0.2),
+//                               ).colorScheme.outline.withValues(alpha: .2),
 //                               width: 1,
 //                             ),
 //                           ),
@@ -600,7 +600,7 @@
 //                                   decoration: BoxDecoration(
 //                                     color: Theme.of(
 //                                       context,
-//                                     ).colorScheme.error.withOpacity(0.1),
+//                                     ).colorScheme.error.withValues(alpha: .1),
 //                                     borderRadius: BorderRadius.circular(10),
 //                                   ),
 //                                   child: Icon(
@@ -756,7 +756,7 @@
 //         boxShadow: showShadow && elevation > 0
 //             ? [
 //                 BoxShadow(
-//                   color: Colors.black.withOpacity(0.05),
+//                   color: Colors.black.withValues(alpha: .05),
 //                   blurRadius: elevation * 2,
 //                   offset: Offset(0, elevation),
 //                   spreadRadius: 0,
@@ -817,11 +817,11 @@
 //                                       subtitleStyle ??
 //                                       TextStyle(
 //                                         color: isTransparent
-//                                             ? Colors.white.withOpacity(0.8)
+//                                             ? Colors.white.withValues(alpha: .8)
 //                                             : Theme.of(context)
 //                                                   .colorScheme
 //                                                   .onSurface
-//                                                   .withOpacity(0.6),
+//                                                   .withValues(alpha: .6),
 //                                         fontSize: 12,
 //                                         fontWeight: FontWeight.w400,
 //                                       ),
@@ -864,13 +864,13 @@
 //                                                 ? Theme.of(context)
 //                                                       .colorScheme
 //                                                       .error
-//                                                       .withOpacity(0.8)
+//                                                       .withValues(alpha: .8)
 //                                                 : isTransparent
-//                                                 ? Colors.white.withOpacity(0.8)
+//                                                 ? Colors.white.withValues(alpha: .8)
 //                                                 : Theme.of(context)
 //                                                       .colorScheme
 //                                                       .onSurface
-//                                                       .withOpacity(0.6),
+//                                                       .withValues(alpha: .6),
 //                                             fontSize: 12,
 //                                             fontWeight: FontWeight.w400,
 //                                           ),
@@ -1021,16 +1021,16 @@
 //                                     shape: BoxShape.circle,
 //                                     border: Border.all(
 //                                       color: isTransparent
-//                                           ? Colors.white.withOpacity(0.2)
+//                                           ? Colors.white.withValues(alpha: .2)
 //                                           : Theme.of(context)
 //                                                 .colorScheme
 //                                                 .primary
-//                                                 .withOpacity(0.2),
+//                                                 .withValues(alpha: .2),
 //                                       width: 2,
 //                                     ),
 //                                     boxShadow: [
 //                                       BoxShadow(
-//                                         color: Colors.black.withOpacity(0.05),
+//                                         color: Colors.black.withValues(alpha: .05),
 //                                         blurRadius: 4,
 //                                         spreadRadius: 1,
 //                                       ),
@@ -1039,9 +1039,9 @@
 //                                   child: CircleAvatar(
 //                                     radius: 16,
 //                                     backgroundColor: isTransparent
-//                                         ? Colors.white.withOpacity(0.2)
+//                                         ? Colors.white.withValues(alpha: .2)
 //                                         : Theme.of(context).colorScheme.primary
-//                                               .withOpacity(0.1),
+//                                               .withValues(alpha: .1),
 //                                     child:
 //                                         authProvider.userProfile?.photoUrl !=
 //                                             null
@@ -1120,18 +1120,18 @@
 //           decoration: BoxDecoration(
 //             shape: BoxShape.circle,
 //             color: isTransparent
-//                 ? Colors.white.withOpacity(0.2)
+//                 ? Colors.white.withValues(alpha: .2)
 //                 : Theme.of(context).colorScheme.surface,
 //             border: Border.all(
 //               color: isTransparent
-//                   ? Colors.white.withOpacity(0.1)
-//                   : Theme.of(context).colorScheme.onSurface.withOpacity(0.1),
+//                   ? Colors.white.withValues(alpha: .1)
+//                   : Theme.of(context).colorScheme.onSurface.withValues(alpha: .1),
 //               width: 1,
 //             ),
 //             boxShadow: showShadow
 //                 ? [
 //                     BoxShadow(
-//                       color: Colors.black.withOpacity(0.05),
+//                       color: Colors.black.withValues(alpha: .05),
 //                       blurRadius: 4,
 //                       spreadRadius: 0,
 //                     ),
@@ -1176,8 +1176,8 @@
 //           boxShadow: [
 //             BoxShadow(
 //               color: isDark
-//                   ? Colors.black.withOpacity(0.4)
-//                   : Colors.black.withOpacity(0.1),
+//                   ? Colors.black.withValues(alpha: .4)
+//                   : Colors.black.withValues(alpha: .1),
 //               blurRadius: 12,
 //               spreadRadius: 0,
 //               offset: const Offset(0, -4),
@@ -1192,7 +1192,7 @@
 //               width: 40,
 //               height: 4,
 //               decoration: BoxDecoration(
-//                 color: theme.colorScheme.onSurface.withOpacity(0.3),
+//                 color: theme.colorScheme.onSurface.withValues(alpha: .3),
 //                 borderRadius: BorderRadius.circular(2),
 //               ),
 //             ),
@@ -1205,7 +1205,7 @@
 //                   Container(
 //                     padding: const EdgeInsets.all(8),
 //                     decoration: BoxDecoration(
-//                       color: theme.colorScheme.primary.withOpacity(0.1),
+//                       color: theme.colorScheme.primary.withValues(alpha: .1),
 //                       borderRadius: BorderRadius.circular(12),
 //                     ),
 //                     child: Icon(
@@ -1268,7 +1268,7 @@
 //                           Container(
 //                             padding: const EdgeInsets.all(16),
 //                             decoration: BoxDecoration(
-//                               color: theme.colorScheme.primary.withOpacity(0.1),
+//                               color: theme.colorScheme.primary.withValues(alpha: .1),
 //                               shape: BoxShape.circle,
 //                             ),
 //                             child: Icon(
@@ -1484,7 +1484,7 @@
 //         boxShadow: showShadow && elevation > 0
 //             ? [
 //                 BoxShadow(
-//                   color: Colors.black.withOpacity(0.05),
+//                   color: Colors.black.withValues(alpha: .05),
 //                   blurRadius: elevation * 2,
 //                   offset: Offset(0, elevation),
 //                   spreadRadius: 0,
@@ -1545,11 +1545,11 @@
 //                                       subtitleStyle ??
 //                                       TextStyle(
 //                                         color: isTransparent
-//                                             ? Colors.white.withOpacity(0.8)
+//                                             ? Colors.white.withValues(alpha: .8)
 //                                             : Theme.of(context)
 //                                                   .colorScheme
 //                                                   .onSurface
-//                                                   .withOpacity(0.6),
+//                                                   .withValues(alpha: .6),
 //                                         fontSize: 12,
 //                                         fontWeight: FontWeight.w400,
 //                                       ),
@@ -1592,13 +1592,13 @@
 //                                                 ? Theme.of(context)
 //                                                       .colorScheme
 //                                                       .error
-//                                                       .withOpacity(0.8)
+//                                                       .withValues(alpha: .8)
 //                                                 : isTransparent
-//                                                 ? Colors.white.withOpacity(0.8)
+//                                                 ? Colors.white.withValues(alpha: .8)
 //                                                 : Theme.of(context)
 //                                                       .colorScheme
 //                                                       .onSurface
-//                                                       .withOpacity(0.6),
+//                                                       .withValues(alpha: .6),
 //                                             fontSize: 12,
 //                                             fontWeight: FontWeight.w400,
 //                                           ),
@@ -1756,16 +1756,16 @@
 //                                     shape: BoxShape.circle,
 //                                     border: Border.all(
 //                                       color: isTransparent
-//                                           ? Colors.white.withOpacity(0.2)
+//                                           ? Colors.white.withValues(alpha: .2)
 //                                           : Theme.of(context)
 //                                                 .colorScheme
 //                                                 .primary
-//                                                 .withOpacity(0.2),
+//                                                 .withValues(alpha: .2),
 //                                       width: 2,
 //                                     ),
 //                                     boxShadow: [
 //                                       BoxShadow(
-//                                         color: Colors.black.withOpacity(0.05),
+//                                         color: Colors.black.withValues(alpha: .05),
 //                                         blurRadius: 4,
 //                                         spreadRadius: 1,
 //                                       ),
@@ -1774,9 +1774,9 @@
 //                                   child: CircleAvatar(
 //                                     radius: 16,
 //                                     backgroundColor: isTransparent
-//                                         ? Colors.white.withOpacity(0.2)
+//                                         ? Colors.white.withValues(alpha: .2)
 //                                         : Theme.of(context).colorScheme.primary
-//                                               .withOpacity(0.1),
+//                                               .withValues(alpha: .1),
 //                                     child:
 //                                         authProvider.userProfile?.photoUrl !=
 //                                             null
@@ -1855,18 +1855,18 @@
 //           decoration: BoxDecoration(
 //             shape: BoxShape.circle,
 //             color: isTransparent
-//                 ? Colors.white.withOpacity(0.2)
+//                 ? Colors.white.withValues(alpha: .2)
 //                 : Theme.of(context).colorScheme.surface,
 //             border: Border.all(
 //               color: isTransparent
-//                   ? Colors.white.withOpacity(0.1)
-//                   : Theme.of(context).colorScheme.onSurface.withOpacity(0.1),
+//                   ? Colors.white.withValues(alpha: .1)
+//                   : Theme.of(context).colorScheme.onSurface.withValues(alpha: .1),
 //               width: 1,
 //             ),
 //             boxShadow: showShadow
 //                 ? [
 //                     BoxShadow(
-//                       color: Colors.black.withOpacity(0.05),
+//                       color: Colors.black.withValues(alpha: .05),
 //                       blurRadius: 4,
 //                       spreadRadius: 0,
 //                     ),
@@ -1913,8 +1913,8 @@
 //           boxShadow: [
 //             BoxShadow(
 //               color: isDark
-//                   ? Colors.black.withOpacity(0.6)
-//                   : Colors.black.withOpacity(0.15),
+//                   ? Colors.black.withValues(alpha: .6)
+//                   : Colors.black.withValues(alpha: .15),
 //               blurRadius: 20,
 //               spreadRadius: 0,
 //               offset: const Offset(0, -8),
@@ -1929,7 +1929,7 @@
 //               width: 48,
 //               height: 4,
 //               decoration: BoxDecoration(
-//                 color: colorScheme.onSurface.withOpacity(0.2),
+//                 color: colorScheme.onSurface.withValues(alpha: .2),
 //                 borderRadius: BorderRadius.circular(2),
 //               ),
 //             ),
@@ -1942,10 +1942,10 @@
 //                   Container(
 //                     padding: const EdgeInsets.all(12),
 //                     decoration: BoxDecoration(
-//                       color: colorScheme.primary.withOpacity(0.1),
+//                       color: colorScheme.primary.withValues(alpha: .1),
 //                       borderRadius: BorderRadius.circular(16),
 //                       border: Border.all(
-//                         color: colorScheme.primary.withOpacity(0.2),
+//                         color: colorScheme.primary.withValues(alpha: .2),
 //                         width: 1,
 //                       ),
 //                     ),
@@ -1973,7 +1973,7 @@
 //                               ? 'All up to date'
 //                               : '${taskProvider.overdueTasks.length} overdue tasks',
 //                           style: theme.textTheme.bodySmall?.copyWith(
-//                             color: colorScheme.onSurface.withOpacity(0.6),
+//                             color: colorScheme.onSurface.withValues(alpha: .6),
 //                             fontWeight: FontWeight.w500,
 //                           ),
 //                         ),
@@ -1988,13 +1988,13 @@
 //                       child: Container(
 //                         padding: const EdgeInsets.all(8),
 //                         decoration: BoxDecoration(
-//                           color: colorScheme.onSurface.withOpacity(0.05),
+//                           color: colorScheme.onSurface.withValues(alpha: .05),
 //                           borderRadius: BorderRadius.circular(12),
 //                         ),
 //                         child: Icon(
 //                           Icons.close_rounded,
 //                           size: 20,
-//                           color: colorScheme.onSurface.withOpacity(0.7),
+//                           color: colorScheme.onSurface.withValues(alpha: .7),
 //                         ),
 //                       ),
 //                     ),
@@ -2010,9 +2010,9 @@
 //               decoration: BoxDecoration(
 //                 gradient: LinearGradient(
 //                   colors: [
-//                     colorScheme.onSurface.withOpacity(0.05),
-//                     colorScheme.onSurface.withOpacity(0.1),
-//                     colorScheme.onSurface.withOpacity(0.05),
+//                     colorScheme.onSurface.withValues(alpha: .05),
+//                     colorScheme.onSurface.withValues(alpha: .1),
+//                     colorScheme.onSurface.withValues(alpha: .05),
 //                   ],
 //                 ),
 //               ),
@@ -2030,15 +2030,15 @@
 //                             decoration: BoxDecoration(
 //                               gradient: LinearGradient(
 //                                 colors: [
-//                                   colorScheme.primary.withOpacity(0.1),
-//                                   colorScheme.primary.withOpacity(0.05),
+//                                   colorScheme.primary.withValues(alpha: .1),
+//                                   colorScheme.primary.withValues(alpha: .05),
 //                                 ],
 //                                 begin: Alignment.topLeft,
 //                                 end: Alignment.bottomRight,
 //                               ),
 //                               shape: BoxShape.circle,
 //                               border: Border.all(
-//                                 color: colorScheme.primary.withOpacity(0.2),
+//                                 color: colorScheme.primary.withValues(alpha: .2),
 //                                 width: 2,
 //                               ),
 //                             ),
@@ -2060,7 +2060,7 @@
 //                           Text(
 //                             'You have no pending notifications.\nGreat job staying on top of things!',
 //                             style: theme.textTheme.bodyMedium?.copyWith(
-//                               color: colorScheme.onSurface.withOpacity(0.6),
+//                               color: colorScheme.onSurface.withValues(alpha: .6),
 //                               height: 1.5,
 //                             ),
 //                             textAlign: TextAlign.center,
@@ -2080,14 +2080,14 @@
 //                             color: isDark ? colorScheme.surface : Colors.white,
 //                             borderRadius: BorderRadius.circular(16),
 //                             border: Border.all(
-//                               color: colorScheme.error.withOpacity(0.2),
+//                               color: colorScheme.error.withValues(alpha: .2),
 //                               width: 1,
 //                             ),
 //                             boxShadow: [
 //                               BoxShadow(
 //                                 color: isDark
-//                                     ? Colors.black.withOpacity(0.2)
-//                                     : colorScheme.shadow.withOpacity(0.08),
+//                                     ? Colors.black.withValues(alpha: .2)
+//                                     : colorScheme.shadow.withValues(alpha: .08),
 //                                 blurRadius: 8,
 //                                 offset: const Offset(0, 2),
 //                               ),
@@ -2109,8 +2109,8 @@
 //                                       decoration: BoxDecoration(
 //                                         gradient: LinearGradient(
 //                                           colors: [
-//                                             colorScheme.error.withOpacity(0.15),
-//                                             colorScheme.error.withOpacity(0.1),
+//                                             colorScheme.error.withValues(alpha: .15),
+//                                             colorScheme.error.withValues(alpha: .1),
 //                                           ],
 //                                           begin: Alignment.topLeft,
 //                                           end: Alignment.bottomRight,
@@ -2153,7 +2153,7 @@
 //                                             ),
 //                                             decoration: BoxDecoration(
 //                                               color: colorScheme.error
-//                                                   .withOpacity(0.1),
+//                                                   .withValues(alpha: .1),
 //                                               borderRadius:
 //                                                   BorderRadius.circular(6),
 //                                             ),
@@ -2204,7 +2204,7 @@
 //                                             boxShadow: [
 //                                               BoxShadow(
 //                                                 color: colorScheme.primary
-//                                                     .withOpacity(0.3),
+//                                                     .withValues(alpha: .3),
 //                                                 blurRadius: 8,
 //                                                 offset: const Offset(0, 2),
 //                                               ),
@@ -2322,7 +2322,7 @@ class ProfessionalAppBar extends StatelessWidget
         boxShadow: showShadow && elevation > 0
             ? [
                 BoxShadow(
-                  color: Colors.black.withOpacity(0.05),
+                  color: Colors.black.withValues(alpha: .05),
                   blurRadius: elevation * 2,
                   offset: Offset(0, elevation),
                   spreadRadius: 0,
@@ -2383,11 +2383,11 @@ class ProfessionalAppBar extends StatelessWidget
                                       subtitleStyle ??
                                       TextStyle(
                                         color: isTransparent
-                                            ? Colors.white.withOpacity(0.8)
+                                            ? Colors.white.withValues(alpha: .8)
                                             : Theme.of(context)
                                                   .colorScheme
                                                   .onSurface
-                                                  .withOpacity(0.6),
+                                                  .withValues(alpha: .6),
                                         fontSize: 12,
                                         fontWeight: FontWeight.w400,
                                       ),
@@ -2407,8 +2407,8 @@ class ProfessionalAppBar extends StatelessWidget
                                             subtitleStyle ??
                                             TextStyle(
                                               color: isTransparent
-                                                  ? Colors.white.withOpacity(
-                                                      0.8,
+                                                  ? Colors.white.withValues(
+                                                      alpha: .8,
                                                     )
                                                   : Theme.of(
                                                       context,
@@ -2430,13 +2430,13 @@ class ProfessionalAppBar extends StatelessWidget
                                     //             ? Theme.of(context)
                                     //                   .colorScheme
                                     //                   .error
-                                    //                   .withOpacity(0.8)
+                                    //                   .withValues(alpha: .8)
                                     //             : isTransparent
-                                    //             ? Colors.white.withOpacity(0.8)
+                                    //             ? Colors.white.withValues(alpha: .8)
                                     //             : Theme.of(context)
                                     //                   .colorScheme
                                     //                   .onSurface
-                                    //                   .withOpacity(0.6),
+                                    //                   .withValues(alpha: .6),
                                     //         fontSize: 12,
                                     //         fontWeight: FontWeight.w400,
                                     //       ),
@@ -2451,9 +2451,13 @@ class ProfessionalAppBar extends StatelessWidget
                                             fontSize: 12,
                                             fontWeight: FontWeight.w400,
                                             color: overdueCount > 0
-                                                ? Colors.red.withOpacity(0.85)
+                                                ? Colors.red.withValues(
+                                                    alpha: .85,
+                                                  )
                                                 : isTransparent
-                                                ? Colors.white.withOpacity(0.8)
+                                                ? Colors.white.withValues(
+                                                    alpha: .8,
+                                                  )
                                                 : Colors.white,
                                           ),
                                     );
@@ -2610,16 +2614,18 @@ class ProfessionalAppBar extends StatelessWidget
                                     shape: BoxShape.circle,
                                     border: Border.all(
                                       color: isTransparent
-                                          ? Colors.white.withOpacity(0.2)
+                                          ? Colors.white.withValues(alpha: .2)
                                           : Theme.of(context)
                                                 .colorScheme
                                                 .primary
-                                                .withOpacity(0.2),
+                                                .withValues(alpha: .2),
                                       width: 2,
                                     ),
                                     boxShadow: [
                                       BoxShadow(
-                                        color: Colors.black.withOpacity(0.05),
+                                        color: Colors.black.withValues(
+                                          alpha: .05,
+                                        ),
                                         blurRadius: 4,
                                         spreadRadius: 1,
                                       ),
@@ -2628,9 +2634,9 @@ class ProfessionalAppBar extends StatelessWidget
                                   child: CircleAvatar(
                                     radius: 16,
                                     backgroundColor: isTransparent
-                                        ? Colors.white.withOpacity(0.2)
+                                        ? Colors.white.withValues(alpha: .2)
                                         : Theme.of(context).colorScheme.primary
-                                              .withOpacity(0.1),
+                                              .withValues(alpha: .1),
                                     child:
                                         authProvider.userProfile?.photoUrl !=
                                             null
@@ -2709,18 +2715,20 @@ class ProfessionalAppBar extends StatelessWidget
           decoration: BoxDecoration(
             shape: BoxShape.circle,
             color: isTransparent
-                ? Colors.white.withOpacity(0.2)
+                ? Colors.white.withValues(alpha: .2)
                 : Theme.of(context).colorScheme.surface,
             border: Border.all(
               color: isTransparent
-                  ? Colors.white.withOpacity(0.1)
-                  : Theme.of(context).colorScheme.onSurface.withOpacity(0.1),
+                  ? Colors.white.withValues(alpha: .1)
+                  : Theme.of(
+                      context,
+                    ).colorScheme.onSurface.withValues(alpha: .1),
               width: 1,
             ),
             boxShadow: showShadow
                 ? [
                     BoxShadow(
-                      color: Colors.black.withOpacity(0.05),
+                      color: Colors.black.withValues(alpha: .05),
                       blurRadius: 4,
                       spreadRadius: 0,
                     ),
@@ -2767,8 +2775,8 @@ class ProfessionalAppBar extends StatelessWidget
           boxShadow: [
             BoxShadow(
               color: isDark
-                  ? Colors.black.withOpacity(0.6)
-                  : Colors.black.withOpacity(0.15),
+                  ? Colors.black.withValues(alpha: .6)
+                  : Colors.black.withValues(alpha: .15),
               blurRadius: 20,
               spreadRadius: 0,
               offset: const Offset(0, -8),
@@ -2783,7 +2791,7 @@ class ProfessionalAppBar extends StatelessWidget
               width: 48,
               height: 4,
               decoration: BoxDecoration(
-                color: colorScheme.onSurface.withOpacity(0.2),
+                color: colorScheme.onSurface.withValues(alpha: .2),
                 borderRadius: BorderRadius.circular(2),
               ),
             ),
@@ -2796,10 +2804,10 @@ class ProfessionalAppBar extends StatelessWidget
                   Container(
                     padding: const EdgeInsets.all(12),
                     decoration: BoxDecoration(
-                      color: colorScheme.primary.withOpacity(0.1),
+                      color: colorScheme.primary.withValues(alpha: .1),
                       borderRadius: BorderRadius.circular(16),
                       border: Border.all(
-                        color: colorScheme.primary.withOpacity(0.2),
+                        color: colorScheme.primary.withValues(alpha: .2),
                         width: 1,
                       ),
                     ),
@@ -2827,7 +2835,7 @@ class ProfessionalAppBar extends StatelessWidget
                               ? 'All up to date'
                               : '${taskProvider.overdueTasks.length} overdue tasks',
                           style: theme.textTheme.bodySmall?.copyWith(
-                            color: colorScheme.onSurface.withOpacity(0.6),
+                            color: colorScheme.onSurface.withValues(alpha: .6),
                             fontWeight: FontWeight.w500,
                           ),
                         ),
@@ -2842,13 +2850,13 @@ class ProfessionalAppBar extends StatelessWidget
                       child: Container(
                         padding: const EdgeInsets.all(8),
                         decoration: BoxDecoration(
-                          color: colorScheme.onSurface.withOpacity(0.05),
+                          color: colorScheme.onSurface.withValues(alpha: .05),
                           borderRadius: BorderRadius.circular(12),
                         ),
                         child: Icon(
                           Icons.close_rounded,
                           size: 20,
-                          color: colorScheme.onSurface.withOpacity(0.7),
+                          color: colorScheme.onSurface.withValues(alpha: .7),
                         ),
                       ),
                     ),
@@ -2864,9 +2872,9 @@ class ProfessionalAppBar extends StatelessWidget
               decoration: BoxDecoration(
                 gradient: LinearGradient(
                   colors: [
-                    colorScheme.onSurface.withOpacity(0.05),
-                    colorScheme.onSurface.withOpacity(0.1),
-                    colorScheme.onSurface.withOpacity(0.05),
+                    colorScheme.onSurface.withValues(alpha: .05),
+                    colorScheme.onSurface.withValues(alpha: .1),
+                    colorScheme.onSurface.withValues(alpha: .05),
                   ],
                 ),
               ),
@@ -2884,15 +2892,17 @@ class ProfessionalAppBar extends StatelessWidget
                             decoration: BoxDecoration(
                               gradient: LinearGradient(
                                 colors: [
-                                  colorScheme.primary.withOpacity(0.1),
-                                  colorScheme.primary.withOpacity(0.05),
+                                  colorScheme.primary.withValues(alpha: .1),
+                                  colorScheme.primary.withValues(alpha: .05),
                                 ],
                                 begin: Alignment.topLeft,
                                 end: Alignment.bottomRight,
                               ),
                               shape: BoxShape.circle,
                               border: Border.all(
-                                color: colorScheme.primary.withOpacity(0.2),
+                                color: colorScheme.primary.withValues(
+                                  alpha: .2,
+                                ),
                                 width: 2,
                               ),
                             ),
@@ -2914,7 +2924,9 @@ class ProfessionalAppBar extends StatelessWidget
                           Text(
                             'You have no pending notifications.\nGreat job staying on top of things!',
                             style: theme.textTheme.bodyMedium?.copyWith(
-                              color: colorScheme.onSurface.withOpacity(0.6),
+                              color: colorScheme.onSurface.withValues(
+                                alpha: .6,
+                              ),
                               height: 1.5,
                             ),
                             textAlign: TextAlign.center,
@@ -2960,7 +2972,7 @@ class ProfessionalAppBar extends StatelessWidget
       background: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(
-            colors: [Colors.green.withOpacity(0.8), Colors.green],
+            colors: [Colors.green.withValues(alpha: .8), Colors.green],
             begin: Alignment.centerLeft,
             end: Alignment.centerRight,
           ),
@@ -3003,7 +3015,7 @@ class ProfessionalAppBar extends StatelessWidget
                   Container(
                     padding: const EdgeInsets.all(16),
                     decoration: BoxDecoration(
-                      color: Colors.green.withOpacity(0.1),
+                      color: Colors.green.withValues(alpha: .1),
                       shape: BoxShape.circle,
                     ),
                     child: Icon(
@@ -3023,7 +3035,7 @@ class ProfessionalAppBar extends StatelessWidget
                   Text(
                     '"${task.title}"',
                     style: theme.textTheme.bodyMedium?.copyWith(
-                      color: colorScheme.onSurface.withOpacity(0.7),
+                      color: colorScheme.onSurface.withValues(alpha: .7),
                     ),
                     textAlign: TextAlign.center,
                   ),
@@ -3042,7 +3054,9 @@ class ProfessionalAppBar extends StatelessWidget
                           child: Text(
                             'Cancel',
                             style: TextStyle(
-                              color: colorScheme.onSurface.withOpacity(0.6),
+                              color: colorScheme.onSurface.withValues(
+                                alpha: .6,
+                              ),
                             ),
                           ),
                         ),
@@ -3115,14 +3129,14 @@ class ProfessionalAppBar extends StatelessWidget
           color: isDark ? colorScheme.surface : Colors.white,
           borderRadius: BorderRadius.circular(16),
           border: Border.all(
-            color: colorScheme.error.withOpacity(0.2),
+            color: colorScheme.error.withValues(alpha: .2),
             width: 1,
           ),
           boxShadow: [
             BoxShadow(
               color: isDark
-                  ? Colors.black.withOpacity(0.2)
-                  : colorScheme.shadow.withOpacity(0.08),
+                  ? Colors.black.withValues(alpha: .2)
+                  : colorScheme.shadow.withValues(alpha: .08),
               blurRadius: 8,
               offset: const Offset(0, 2),
             ),
@@ -3144,15 +3158,15 @@ class ProfessionalAppBar extends StatelessWidget
                     decoration: BoxDecoration(
                       gradient: LinearGradient(
                         colors: [
-                          colorScheme.error.withOpacity(0.15),
-                          colorScheme.error.withOpacity(0.1),
+                          colorScheme.error.withValues(alpha: .15),
+                          colorScheme.error.withValues(alpha: .1),
                         ],
                         begin: Alignment.topLeft,
                         end: Alignment.bottomRight,
                       ),
                       borderRadius: BorderRadius.circular(12),
                       border: Border.all(
-                        color: colorScheme.error.withOpacity(0.3),
+                        color: colorScheme.error.withValues(alpha: .3),
                         width: 1,
                       ),
                     ),
@@ -3183,7 +3197,7 @@ class ProfessionalAppBar extends StatelessWidget
                             vertical: 4,
                           ),
                           decoration: BoxDecoration(
-                            color: colorScheme.error.withOpacity(0.1),
+                            color: colorScheme.error.withValues(alpha: .1),
                             borderRadius: BorderRadius.circular(6),
                           ),
                           child: Text(
@@ -3205,7 +3219,7 @@ class ProfessionalAppBar extends StatelessWidget
                       vertical: 4,
                     ),
                     decoration: BoxDecoration(
-                      color: colorScheme.primary.withOpacity(0.1),
+                      color: colorScheme.primary.withValues(alpha: .1),
                       borderRadius: BorderRadius.circular(8),
                     ),
                     child: Row(

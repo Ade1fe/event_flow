@@ -6,6 +6,7 @@ class RegisterScreen extends StatefulWidget {
   const RegisterScreen({super.key});
 
   @override
+    // ignore: library_private_types_in_public_api
   _RegisterScreenState createState() => _RegisterScreenState();
 }
 
@@ -36,15 +37,18 @@ class _RegisterScreenState extends State<RegisterScreen> {
           _emailController.text.trim(),
           _passwordController.text.trim(),
         );
+        // ignore: avoid_print
         print('Result: ${result.runtimeType}, value: $result');
 
         // Registration successful
+        // ignore: use_build_context_synchronously
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
             content: Text('Registration successful!'),
             backgroundColor: Colors.green,
           ),
         );
+        // ignore: use_build_context_synchronously
         Navigator.pop(context);
       } on FirebaseAuthException catch (e) {
         String errorMessage = 'Registration failed';
@@ -62,6 +66,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
             errorMessage = e.message ?? 'Registration failed';
         }
 
+        // ignore: use_build_context_synchronously
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
             content: Text(errorMessage),
@@ -69,6 +74,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
           ),
         );
       } catch (e) {
+        // ignore: use_build_context_synchronously
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
             content: Text('An unexpected error occurred: $e'),
