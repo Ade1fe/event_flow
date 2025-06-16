@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:fl_chart/fl_chart.dart';
-import 'package:task_manager_clean/widgets/custom_app_bar.dart';
 import 'package:task_manager_clean/widgets/professional_app_bar.dart';
 import '../../providers/task_provider.dart';
 import '../../providers/auth_provider.dart';
@@ -16,7 +15,7 @@ class AnalyticsTab extends StatefulWidget {
 }
 
 class _AnalyticsTabState extends State<AnalyticsTab> {
-  final ScrollController _scrollController = ScrollController();
+  // final ScrollController _scrollController = ScrollController();
 
   @override
   Widget build(BuildContext context) {

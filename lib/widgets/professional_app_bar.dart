@@ -161,8 +161,8 @@ class ProfessionalAppBar extends StatelessWidget
                                             subtitleStyle ??
                                             TextStyle(
                                               color: isTransparent
-                                                  ? Colors.white.withOpacity(
-                                                      0.8,
+                                                  ? Colors.white.withValues(
+                                                      alpha: 0.8,
                                                     )
                                                   : Theme.of(
                                                       context,
