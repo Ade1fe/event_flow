@@ -204,7 +204,7 @@ class _LoginScreenState extends State<LoginScreen>
                       ElevatedButton(
                         onPressed: authProvider.isLoading ? null : _signIn,
                         child: Padding(
-                          padding: EdgeInsets.symmetric(vertical: 12),
+                          padding: EdgeInsets.symmetric(vertical: 3),
                           child: Text(
                             'Sign In',
                             style: TextStyle(

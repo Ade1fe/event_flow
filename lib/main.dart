@@ -3,9 +3,10 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/services.dart';
 // import 'package:momentum/providers/category_provider.dart';
 import 'package:provider/provider.dart';
+import 'package:task_manager_clean/firebase_options.dart';
 import 'package:task_manager_clean/providers/category_provider.dart';
 
-import 'services/firebase_options.dart';
+// import 'services/firebase_options.dart';
 import 'services/theme_service.dart';
 import 'screens/splash_screen.dart';
 import 'providers/auth_provider.dart';

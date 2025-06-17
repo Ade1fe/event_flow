@@ -25,15 +25,6 @@ class _AnalyticsTabState extends State<AnalyticsTab> {
     final isDark = theme.brightness == Brightness.dark;
 
     return Scaffold(
-      // appBar: AppBar(
-      //   title: Text('Analytics'),
-      // ),
-      // appBar: CustomAppBar(
-      //   title: 'Analytics',
-      //   showProfile: false,
-      //   scrollController: _scrollController,
-      //   showNotifications: true,
-      // ),
       appBar: ProfessionalAppBar(
         title: 'Analytics',
         showNotifications: true,

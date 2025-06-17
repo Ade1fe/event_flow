@@ -45,7 +45,7 @@ class ProfessionalAppBar extends StatelessWidget
     this.elevation = 2,
     this.isTransparent = false,
     this.flexibleSpace,
-    this.height = kToolbarHeight + 70,
+    this.height = kToolbarHeight + 50,
     this.showSubtitle = true,
     this.subtitle,
     this.titleStyle,

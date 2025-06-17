@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -233,15 +232,13 @@ class ProfileTab extends StatelessWidget {
               title: const Text('Task Reminders'),
               subtitle: const Text('Get notified about upcoming tasks'),
               value: true,
-              onChanged: (value) {
-              },
+              onChanged: (value) {},
             ),
             SwitchListTile(
               title: const Text('Overdue Alerts'),
               subtitle: const Text('Get notified about overdue tasks'),
               value: true,
-              onChanged: (value) {
-              },
+              onChanged: (value) {},
             ),
           ],
         ),
@@ -283,7 +280,7 @@ class ProfileTab extends StatelessWidget {
             Text('Need help with Momentum?'),
             SizedBox(height: 16),
             Text('• Check our FAQ section'),
-            Text('• Contact support: support@taskmaster.com'),
+            Text('• Contact support: support@momentum.com'),
             Text('• Visit our website for tutorials'),
           ],
         ),

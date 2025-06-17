@@ -29,10 +29,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen>
     );
 
     _fadeAnimation = Tween<double>(begin: 0.0, end: 1.0).animate(
-      CurvedAnimation(
-        parent: _animationController,
-        curve: Curves.easeIn,
-      ),
+      CurvedAnimation(parent: _animationController, curve: Curves.easeIn),
     );
 
     _animationController.forward();
@@ -49,8 +46,9 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen>
     if (_formKey.currentState!.validate()) {
       final authProvider = Provider.of<AuthProvider>(context, listen: false);
 
-      final success =
-          await authProvider.resetPassword(_emailController.text.trim());
+      final success = await authProvider.resetPassword(
+        _emailController.text.trim(),
+      );
 
       if (success) {
         setState(() {
@@ -114,10 +112,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen>
                         _emailSent
                             ? 'We\'ve sent a password reset link to ${_emailController.text}'
                             : 'Enter your email address and we\'ll send you a link to reset your password',
-                        style: TextStyle(
-                          fontSize: 16,
-                          color: Colors.grey,
-                        ),
+                        style: TextStyle(fontSize: 16, color: Colors.grey),
                         textAlign: TextAlign.center,
                       ),
                       SizedBox(height: 48),
@@ -131,12 +126,16 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen>
                               color: Colors.red.withValues(alpha: .1),
                               borderRadius: BorderRadius.circular(8),
                               border: Border.all(
-                                  color: Colors.red.withValues(alpha: .3)),
+                                color: Colors.red.withValues(alpha: .3),
+                              ),
                             ),
                             child: Row(
                               children: [
-                                Icon(Icons.error_outline,
-                                    color: Colors.red, size: 20),
+                                Icon(
+                                  Icons.error_outline,
+                                  color: Colors.red,
+                                  size: 20,
+                                ),
                                 SizedBox(width: 8),
                                 Expanded(
                                   child: Text(
@@ -160,8 +159,9 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen>
                             if (value == null || value.isEmpty) {
                               return 'Please enter your email';
                             }
-                            if (!RegExp(r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$')
-                                .hasMatch(value)) {
+                            if (!RegExp(
+                              r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$',
+                            ).hasMatch(value)) {
                               return 'Please enter a valid email address';
                             }
                             return null;
@@ -171,10 +171,11 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen>
 
                         // Reset button
                         ElevatedButton(
-                          onPressed:
-                              authProvider.isLoading ? null : _resetPassword,
+                          onPressed: authProvider.isLoading
+                              ? null
+                              : _resetPassword,
                           child: Padding(
-                            padding: EdgeInsets.symmetric(vertical: 12),
+                            padding: EdgeInsets.symmetric(vertical: 4),
                             child: Text(
                               'Send Reset Link',
                               style: TextStyle(
@@ -192,7 +193,8 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen>
                             color: Colors.green.withValues(alpha: .1),
                             borderRadius: BorderRadius.circular(12),
                             border: Border.all(
-                                color: Colors.green.withValues(alpha: .3)),
+                              color: Colors.green.withValues(alpha: .3),
+                            ),
                           ),
                           child: Column(
                             children: [
@@ -245,9 +247,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen>
                         },
                         child: Text(
                           'Back to Sign In',
-                          style: TextStyle(
-                            fontWeight: FontWeight.w600,
-                          ),
+                          style: TextStyle(fontWeight: FontWeight.w600),
                         ),
                       ),
                     ],

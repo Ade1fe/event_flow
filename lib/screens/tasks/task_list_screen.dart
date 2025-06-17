@@ -37,17 +37,6 @@ class _TaskListScreenState extends State<TaskListScreen> {
     final taskProvider = Provider.of<TaskProvider>(context);
 
     return Scaffold(
-      // appBar: AppBar(
-      //   title: Text(widget.title),
-      //   actions: [
-      //     IconButton(
-      //       icon: Icon(Icons.sort),
-      //       onPressed: () {
-      //         _showSortOptions(context);
-      //       },
-      //     ),
-      //   ],
-      // ),
       appBar: ProfessionalAppBar(
         title: widget.title,
         // showNotifications: true,

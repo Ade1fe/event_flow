@@ -60,17 +60,6 @@ class _HomeTabState extends State<HomeTab> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // Using the custom app bar
-      // appBar: CustomAppBar(
-      //   title: 'Home',
-      //   showProfile: true,
-      //   scrollController: _scrollController,
-      //   showNotifications: true,
-      //   onProfileTap: () {
-      //     // Navigate to profile or show profile menu
-      //     DefaultTabController.of(context).animateTo(3); // Profile tab
-      //   },
-      // ),
       appBar: ProfessionalAppBar(
         title: 'Home',
         showNotifications: true,
@@ -287,6 +276,11 @@ class _HomeTabState extends State<HomeTab> {
                           ),
                         ),
                         TextButton(
+                          style: ButtonStyle(
+                            foregroundColor: WidgetStateProperty.all(
+                              Colors.white,
+                            ),
+                          ),
                           onPressed: () {
                             Navigator.push(
                               context,
@@ -319,46 +313,49 @@ class _HomeTabState extends State<HomeTab> {
                                   .withValues(alpha: .3),
                               borderRadius: BorderRadius.circular(16),
                             ),
-                            child: Column(
-                              children: [
-                                Icon(
-                                  Icons.task_alt,
-                                  size: 64,
-                                  color: Colors.grey[400],
-                                ),
-                                SizedBox(height: 16),
-                                Text(
-                                  'No tasks yet',
-                                  style: TextStyle(
-                                    fontSize: 18,
-                                    color: Colors.grey[600],
+                            //      return Center(
+                            child: Center(
+                              child: Column(
+                                children: [
+                                  Icon(
+                                    Icons.task_alt,
+                                    size: 64,
+                                    color: Colors.grey[400],
                                   ),
-                                ),
-                                SizedBox(height: 8),
-                                Text(
-                                  'Create your first task to get started!',
-                                  style: TextStyle(color: Colors.grey[500]),
-                                ),
-                                SizedBox(height: 16),
-                                ElevatedButton.icon(
-                                  onPressed: () {
-                                    Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                        builder: (context) => AddTaskScreen(),
-                                      ),
-                                    );
-                                  },
-                                  icon: Icon(Icons.add),
-                                  label: Text('Add Task'),
-                                  style: ElevatedButton.styleFrom(
-                                    padding: EdgeInsets.symmetric(
-                                      horizontal: 24,
-                                      vertical: 12,
+                                  SizedBox(height: 16),
+                                  Text(
+                                    'No tasks yet',
+                                    style: TextStyle(
+                                      fontSize: 18,
+                                      color: Colors.grey[600],
                                     ),
                                   ),
-                                ),
-                              ],
+                                  SizedBox(height: 8),
+                                  Text(
+                                    'Create your first task to get started!',
+                                    style: TextStyle(color: Colors.grey[500]),
+                                  ),
+                                  SizedBox(height: 16),
+                                  ElevatedButton.icon(
+                                    onPressed: () {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) => AddTaskScreen(),
+                                        ),
+                                      );
+                                    },
+                                    icon: Icon(Icons.add),
+                                    label: Text('Add Task'),
+                                    style: ElevatedButton.styleFrom(
+                                      padding: EdgeInsets.symmetric(
+                                        horizontal: 24,
+                                        vertical: 12,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ),
                           );
                         }

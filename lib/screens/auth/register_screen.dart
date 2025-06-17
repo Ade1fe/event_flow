@@ -442,7 +442,8 @@ class _RegisterScreenState extends State<RegisterScreen>
                         ElevatedButton(
                           onPressed: authProvider.isLoading ? null : _register,
                           child: Padding(
-                            padding: EdgeInsets.symmetric(vertical: 12),
+                            padding: EdgeInsets.symmetric(vertical: 4),
+
                             child: Text(
                               'Create Account',
                               style: TextStyle(
