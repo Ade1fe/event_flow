@@ -59,6 +59,7 @@ class _HomeTabState extends State<HomeTab> {
 
   @override
   Widget build(BuildContext context) {
+    final isDark = Theme.of(context).brightness == Brightness.dark;
     return Scaffold(
       appBar: ProfessionalAppBar(
         title: 'Home',
@@ -278,7 +279,7 @@ class _HomeTabState extends State<HomeTab> {
                         TextButton(
                           style: ButtonStyle(
                             foregroundColor: WidgetStateProperty.all(
-                              Colors.white,
+                              isDark ? Colors.white : Colors.black,
                             ),
                           ),
                           onPressed: () {
