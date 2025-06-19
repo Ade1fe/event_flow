@@ -1,4 +1,4 @@
-# ✅ Task Manager Clean
+# ✅ Momentum
 
 <p align="center">
   <img src="assets/logo.png" alt="Task Manager App Logo" width="200"/>
@@ -16,7 +16,7 @@
 
 ## 📋 Overview
 
-**Task Manager Clean** is a task management app built with **Flutter** and **Firebase**, designed for productivity and simplicity. Users can **add**, **edit**, **delete**, and **track tasks** with timers, categories, and reminders.
+**Momentum** is a task management app built with **Flutter** and **Firebase**, designed for productivity and simplicity. Users can **add**, **edit**, **delete**, and **track tasks** with timers, categories, and reminders.
 
 ---
 
